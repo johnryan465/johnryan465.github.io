@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-layout: default
+layout: single
 excerpt: "This is a test post"
 sitemap: false
 ---
