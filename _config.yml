@@ -71,7 +71,7 @@ analytics:
 author:
   name             : "John Ryan"
   avatar           : "bio-photo.jpg"
-  bio              : "I am an amazing person."
+  bio              : "Data Sciencetist."
   location         : "Ireland"
   email            : "john@solaire.ie"
   uri              :
@@ -98,8 +98,6 @@ author:
   xing             :
   youtube          :
 
-
-# Reading Files
 include:
   - .htaccess
   - _pages
