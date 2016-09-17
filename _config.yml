@@ -41,7 +41,6 @@ inc:
   
   # Setup your fonts, colors etc at _assets/stylesheets/main.scss
 
-url:         http://incorporated.sendtoinc.com
 repository: johnryan465/johnryan465.github.io
 url: "http://johnryan465.github.io" # the base hostname & protocol for your site
 twitter_username: johnryan465
