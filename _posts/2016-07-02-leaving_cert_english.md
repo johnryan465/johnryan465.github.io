@@ -25,17 +25,17 @@ That would be 5 choose 4 / 8 choose 4 = 5/70 or 7.14% Higher risk certainly but 
 Can we go lower and still be chance of ccatastrophe being acceptable?
 From the table it is obvious that studying any more than 5 poets is redundant.
 
-[table]
-Number of poets you studied,Formula,Percent chance of no poet you have studied coming up
-8 poets,"0 choose 4 / 8 choose 4 = 0/70",0%
-7 poets,"1 choose 4 / 8 choose 4 = 0/70",0%
-6 poets,"2 choose 4 / 8 choose 4 = 0/70",0%
-5 poets,"3 choose 4 / 8 choose 4 = 0/70",0%
-4 poets,"4 choose 4 / 8 choose 4 = 1/70",1.42%
-3 poets,"5 choose 4 / 8 choose 4 = 5/70",7.14%
-2 poets,"6 choose 4 / 8 choose 4 = 15/70",21.42%
-1 poet,"7 choose 4 / 8 choose 4 = 35/70",50%
-0 poet's,"8 choose 4 / 8 choose 4 = 70/70",100%
-[/table]
+|Number of poets you studied|Formula|Percent chance of no poet you have studied coming up|
+| ------------- | ------------- |------------- |
+|8 poets|"0 choose 4 / 8 choose 4 = 0/70"|0%|
+|7 poets|"1 choose 4 / 8 choose 4 = 0/70"|0%|
+|6 poets|"2 choose 4 / 8 choose 4 = 0/70"|0%|
+|5 poets|"3 choose 4 / 8 choose 4 = 0/70"|0%|
+|4 poets|"4 choose 4 / 8 choose 4 = 1/70"|1.42%|
+|3 poets|"5 choose 4 / 8 choose 4 = 5/70"|7.14%|
+|2 poets|"6 choose 4 / 8 choose 4 = 15/70"|21.42%|
+|1 poet|"7 choose 4 / 8 choose 4 = 35/70"|50%|
+|0 poet's|"8 choose 4 / 8 choose 4 = 70/70"|100%|
+
 
 These calculations presume that all poets are equally likely to come up however this is obviously not going to be true all the time, anniversaries awards etc will skew these results.
