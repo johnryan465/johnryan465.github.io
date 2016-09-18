@@ -33,7 +33,7 @@ From the table it is obvious that studying any more than 5 poets is redundant.
 
 |Number of poets you studied|Formula|Percent chance of no poet you have studied coming up|
 | ------------- | ------------- |------------- |
-|8 poets|$\binom{0}{4} / \binom{8}{4} = 0/70$|$0\%$|
+|8 poets|$$\binom{0}{4} / \binom{8}{4} = 0/70$$|$0\%$|
 |7 poets|$\binom{1}{4} / \binom{8}{4} = 0/70$|$0\%$|
 |6 poets|$\binom{2}{4} / \binom{8}{4} = 0/70$|$0\%$|
 |5 poets|$\binom{3}{4} / \binom{8}{4} = 0/70$|$0\%$|
