@@ -4,6 +4,7 @@ layout: single
 excerpt: "What to do when you want to do as little as possible"
 sitemap: false
 ---
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 The Leaving Cert is the most important examinations that Irish secondary school students have to take. I decides what college course that you get accepted into based on your best 6 subjects. Click [here](https://www.cao.ie/index.php?page=scoring&s=lcepointsgrid) to learn more.
 
