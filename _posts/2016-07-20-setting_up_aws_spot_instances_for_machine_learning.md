@@ -26,47 +26,63 @@ Then select the Ubuntu 14.04 image
 ![AWS 3](https://dl.dropboxusercontent.com/s/mpfedo9lyurun2z/EC2-Management-Console1.png)
 
 Pick whichever spec machine you want.
-<strong>If you want to use Keras for Deep Learning I would strongly recommend selecting an instance at this stage that contains a GPU</strong>
+
+**If you want to use Keras for Deep Learning I would strongly recommend selecting an instance at this stage that contains a GPU**
+
 ![AWS 4](https://dl.dropboxusercontent.com/s/pf8q8z8sdj6fi93/EC2-Management-Console4.png)
 
 Tick the spot instance button and put in a relatively high number(It doesn't matter you won't be paying this price)
+
 Click Review and Launch
+
 ![AWS 5](https://dl.dropboxusercontent.com/s/p813orn05nf8lvy/EC2-Management-Console5.png)
 
 Click Launch
+
 ![AWS 6](https://dl.dropboxusercontent.com/s/abuqwuey3xnrcdj/EC2-Management-Console6.png)
 
 Make sure to download the key pair or else you wont be able to access the instance.
+
 ![AWS 7](https://dl.dropboxusercontent.com/s/9udqdxi13pnzg01/EC2-Management-Console7.png)
 
 Success!
+
 ![AWS 8](https://dl.dropboxusercontent.com/s/4g6tlyfgn6wpgny/EC2-Management-Console8.png)
 
 ## Connecting to your new instance
 
 You now have an AWS instance that is started.
+
 Now go to your running instances and take note of your public IP
+
 ![AWS 10](https://dl.dropboxusercontent.com/s/p5wij0y5hnqk2lk/EC2-Management-Console10.png)
 
 Next install putty and puttygen from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
 Open Puttygen and load in the key that you downloaded.
+
 ![Putty 1](https://dl.dropboxusercontent.com/s/uvv5c8vbs10dd7f/Screenshot-1.png)
+
 Then save the private key, close puttygen and open putty.
 
 In the hostname field type ubuntu@(your ip)
+
 ![Putty 2](https://dl.dropboxusercontent.com/s/44pwk6auh09nz2k/Screenshot-4.png)
 
 Navigate to Connection -&gt; SSH -&gt; Auth and set the private to key to the one created by Puttygen
+
 ![Putty 3](https://dl.dropboxusercontent.com/s/6hsr1eux62ryaq5/Screenshot-6.png)
 
 Go back to session and enter a name in "Saved Sessions" then click save, in the future you can just select the name you have given it and select load to open the SSH session.
+
 ![Putty 4](https://dl.dropboxusercontent.com/s/sbr0qvpp5s6h4at/Screenshot-5.png)
 
 Click open, then click yes on the security alert.
+
 ![Putty 5](https://dl.dropboxusercontent.com/s/go7bzmepk2ca1if/Screenshot-7.png)
 
 When the shell appears enter the following commands to install sklearn on the instance
+
 ![Putty 6](https://dl.dropboxusercontent.com/s/tzkxyhh8m5ri2ln/Screenshot-8.png)
 
 ## Installing Scikit-Learn
