@@ -9,7 +9,8 @@ sitemap: false
 The Leaving Cert is the most important examinations that Irish secondary school students have to take. I decides what college course that you get accepted into based on your best 6 subjects. Click [here](https://www.cao.ie/index.php?page=scoring&s=lcepointsgrid) to learn more.
 
 Many people take English at Higher level but as a subject it is a major time sink, so I was curious how little work I could put into the exam using mathematics.
-## _Defining the problem:_
+
+## Defining the problem:
 
 In English Paper 2 there is a studied poetry section where out of a designated list of 8 poets. 4 appear and you must answer on one of these. However to account for every eventuality you must study 5 poets, you would often here of many people only studying 4 poets going into an exam saying it is unlikely that all 4 wont come up.
 
