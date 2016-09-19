@@ -2,3 +2,5 @@
 main:
   - title: "About"
     url: http://www.solaire.ie/about.html
+  - title: "Projects"
+    url: http://www.solaire.ie/projects.html
