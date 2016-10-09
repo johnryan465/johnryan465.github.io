@@ -7,4 +7,4 @@ permalink: /harassmentdetection.html
 author_profile: true
 ---
 
-harassmentdetection
+{% include email_signup.html %}
