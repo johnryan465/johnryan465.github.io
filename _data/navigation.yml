@@ -2,5 +2,7 @@
 main:
   - title: "About"
     url: http://www.solaire.ie/about.html
-  - title: "Projects"
-    url: http://www.solaire.ie/projects.html
+  - title: "Papers"
+    url: http://www.solaire.ie/papers.html
+  - title: "Harassment Detection"
+    url: http://www.solaire.ie/harassmentdetection.html

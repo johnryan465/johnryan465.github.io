@@ -1,9 +1,9 @@
 ---
-title: "Projects"
+title: "Papers"
 layout: splash
-excerpt: "Projects"
+excerpt: "Papers"
 sitemap: false
-permalink: /projects.html
+permalink: /papers.html
 author_profile: true
 ---
 
