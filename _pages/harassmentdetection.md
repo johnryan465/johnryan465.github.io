@@ -7,6 +7,7 @@ permalink: /harassmentdetection.html
 author_profile: true
 ---
 An Harassment Detection API is being developed currently by us.
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="http://www.solaire.ie/assets/js/raphael-2.1.4.min.js"></script>
 <script src="http://www.solaire.ie/assets/js/justgage.js"></script>
 <script>
