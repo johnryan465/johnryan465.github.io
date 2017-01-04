@@ -20,7 +20,8 @@ An Harassment Detection API is being developed currently by us.
           title: "Harassment Detector",
           decimals: 5,
           levelColorsGradient: false,
-          label: "Confidence"
+          label: "Confidence",
+          width: 200
         });
         $("#submit1").click(function(){
             console.log($("#text").val() );
