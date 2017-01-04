@@ -31,8 +31,8 @@ An Harassment Detection API is being developed currently by us.
         });
     });
 </script>
-<input type="text" id="text">
-<input id="submit1" type="button" value="Submit"/>
-<div id="g1"></div>
+<input type="text" id="text"><input id="submit1" type="button" value="Submit"/>
+<br>
+<div id="g1" align="center"></div>
 If you would like to be updated on the current status please sign up below.
 {% include email_signup.html %}
