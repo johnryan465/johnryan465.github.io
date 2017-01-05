@@ -21,7 +21,6 @@ An Harassment Detection API is being developed currently by us.
           decimals: 5,
           levelColorsGradient: false,
           label: "Confidence",
-          width: 200
         });
         $("#submit1").click(function(){
             console.log($("#text").val() );
@@ -31,8 +30,8 @@ An Harassment Detection API is being developed currently by us.
         });
     });
 </script>
-<input type="text" id="text"><input id="submit1" type="button" value="Submit"/>
+<input type="text" id="text"><input id="submit1" type="submit" value="Submit"/>
 <br>
-<div id="g1" align="center"></div>
+<div id="g1" style="  width: 100%;max-width: 400px; " align="center"></div>
 If you would like to be updated on the current status please sign up below.
 {% include email_signup.html %}
