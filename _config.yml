@@ -62,11 +62,12 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google"
   google:
     tracking_id          : UA-85404938-1
 
-
+header:
+  image: http://www.solaire.ie/images/solaire.png
 # Site Author
 author:
   name             : "John Ryan"
