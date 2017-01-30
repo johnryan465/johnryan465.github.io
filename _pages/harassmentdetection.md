@@ -25,7 +25,7 @@ This is a Harassment Detection API built using deep neural networks.
         });
         $("#submit1").click(function(){
             console.log($("#text").val() );
-            $.get("http://52.212.223.189:5000/classify",{ text: $("#text").val() }, function(data, status){
+            $.get("http://35.166.201.150:5000/classify",{ text: $("#text").val() }, function(data, status){
                 g1.refresh(data);
             });
         });
