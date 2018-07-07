@@ -9,9 +9,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("POST", "https://nosedive.hackmirror.icu/beta/boost_rating");
+xhr.open("POST", "/beta/boost_rating");
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-xhr.setRequestHeader("Cache-Control", "no-cache");
-xhr.setRequestHeader("Postman-Token", "fda4bea5-cea2-43f4-89e9-e6c0188d43d9");
 
 xhr.send(data);
