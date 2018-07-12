@@ -4,6 +4,14 @@ layout: single
 excerpt: "Where does the formula come from?"
 sitemap: false
 ---
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 (In this derivation I may go into some unnecessary detail for some of the mathematically experienced readers but I would rather that than for some readers to be lost by me skipping steps)
