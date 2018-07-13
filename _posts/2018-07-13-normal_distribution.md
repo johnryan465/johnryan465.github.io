@@ -5,6 +5,12 @@ excerpt: "Where does the formula come from?"
 sitemap: false
 ---
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script
+src="https://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
 
 (In this derivation I may go into some unnecessary detail for some of the mathematically experienced readers but I would rather that than for some readers to be lost by me skipping steps)
 
@@ -265,7 +271,17 @@ This P.M.F satisfies the all the properties we started with, however the k is a 
 
 $$ p(x) = \sqrt{\frac{k}{2\pi}} e^{\frac{-k}{2}(x - \mu)^2}  $$
 
-<iframe src="https://www.solaire.ie/assets/html/normal_distribution_k.html" width="100%"></iframe>
+<p class="input">
+  <label class="input" for="meanbox">Mean: </label>
+  <input class="input inputbox" type="text" id="meanbox" size="3" value="0"/>
+  <label class="input" for="stdevbox">K</label>
+  <input class="input inputbox" type="text" id="stdevbox" size="3" value="1"/>
+  <input class="input inputbox" type="checkbox" id="axisscalecheck" value="lock" checked>Scale axes</input>
+</p>
+<script type="text/javascript" src="http://www.solaire.ie/assets/js/normal_distribution_k.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.solaire.ie/assets/css/normal_distribution_k.css">
+
+
 The definition of variance
 
 $$\sigma^2 = \int_{-\infty}^{\infty}(x-\mu)^2f(x)dx$$
