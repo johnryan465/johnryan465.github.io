@@ -4,7 +4,7 @@ var margin = {
         bottom: 30,
         left: 50
     },
-width = $(window).width() - margin.left - margin.right,
+width = $("#normal_distribution_k").width() - margin.left - margin.right,
 height = 450 - margin.top - margin.bottom;
 base_mean = 0;
 base_k = 1;
