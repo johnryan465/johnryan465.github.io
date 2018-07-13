@@ -265,8 +265,7 @@ This P.M.F satisfies the all the properties we started with, however the k is a 
 
 $$ p(x) = \sqrt{\frac{k}{2\pi}} e^{\frac{-k}{2}(x - \mu)^2}  $$
 
-<iframe style="width:100%;"src="https://www.solaire.ie/assets/html/normal_distribution_k.html"></iframe>
-
+<iframe src="https://www.solaire.ie/assets/html/normal_distribution_k.html" width="100%"></iframe>
 The definition of variance
 
 $$\sigma^2 = \int_{-\infty}^{\infty}(x-\mu)^2f(x)dx$$
