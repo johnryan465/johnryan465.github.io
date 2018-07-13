@@ -271,6 +271,7 @@ This P.M.F satisfies the all the properties we started with, however the k is a 
 
 $$ p(x) = \sqrt{\frac{k}{2\pi}} e^{\frac{-k}{2}(x - \mu)^2}  $$
 
+
 <p class="input">
   <label class="input" for="meanbox">Mean: </label>
   <input class="input inputbox" type="text" id="meanbox" size="3" value="0"/>
@@ -278,9 +279,9 @@ $$ p(x) = \sqrt{\frac{k}{2\pi}} e^{\frac{-k}{2}(x - \mu)^2}  $$
   <input class="input inputbox" type="text" id="stdevbox" size="3" value="1"/>
   <input class="input inputbox" type="checkbox" id="axisscalecheck" value="lock" checked>Scale axes</input>
 </p>
+<div id="normal_distribution_k"><div>
 <script type="text/javascript" src="http://www.solaire.ie/assets/js/normal_distribution_k.js"></script>
 <link rel="stylesheet" type="text/css" href="http://www.solaire.ie/assets/css/normal_distribution_k.css">
-
 
 The definition of variance
 
