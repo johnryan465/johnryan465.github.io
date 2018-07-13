@@ -277,7 +277,7 @@ $$ p(x) = \sqrt{\frac{k}{2\pi}} e^{\frac{-k}{2}(x - \mu)^2}  $$
   <input class="input inputbox" type="text" id="meanbox" size="3" value="0"/>
   <label class="input" for="stdevbox">K</label>
   <input class="input inputbox" type="text" id="stdevbox" size="3" value="1"/>
-  <input class="input inputbox" type="checkbox" id="axisscalecheck" value="lock" checked>Scale axes</input>
+  <input class="input inputbox" type="checkbox" id="axisscalecheck" value="lock" checked>Scale axes
 </p>
 <div id="normal_distribution_k"><div>
 <script type="text/javascript" src="http://www.solaire.ie/assets/js/normal_distribution_k.js"></script>
