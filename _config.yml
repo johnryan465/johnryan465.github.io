@@ -3,9 +3,9 @@ title                    : "Solaire.ie"
 title_separator          : "-"
 name                     : "John Ryan"
 description              : "Machine Learning"
-url                      : http://www.solaire.ie # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : ""# the subpath of your site, e.g. "/blog"
-repository               : johnryan465/johnryan465.github.io# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+url                      : https://www.solaire.ie # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : johnryan465/johnryan465.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 
 words_per_minute         : 200
@@ -67,7 +67,7 @@ analytics:
     tracking_id          : UA-85404938-1
 
 header:
-  image: http://www.solaire.ie/images/solaire.png
+  image: /images/solaire.png
 # Site Author
 author:
   name             : "John Ryan"
@@ -165,7 +165,7 @@ paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist

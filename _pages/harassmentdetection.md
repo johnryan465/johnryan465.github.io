@@ -8,8 +8,8 @@ author_profile: true
 ---
 This is a Harassment Detection API built using deep neural networks.
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="http://www.solaire.ie/assets/js/raphael-2.1.4.min.js"></script>
-<script src="http://www.solaire.ie/assets/js/justgage.js"></script>
+<script src="assets/js/raphael-2.1.4.min.js"></script>
+<script src="assets/js/justgage.js"></script>
 <script>
     $(document).ready(function() {
         var g1 = new JustGage({
