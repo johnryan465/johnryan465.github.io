@@ -6,6 +6,8 @@ sitemap: false
 permalink: /harassmentdetection.html
 author_profile: true
 ---
+
+(Server is currently inactive)
 This is a Harassment Detection API built using deep neural networks.
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="assets/js/raphael-2.1.4.min.js"></script>
