@@ -56,10 +56,10 @@ $$\tag{A4}\int_{-\infty}^{\infty}p(x)dx = 1$$
 
 Combining properties 1 and 2:
 
-$$\tag{Eq 1.1}\frac{-d(p(x)}{dx}  \propto (x-\mu)p(x)$$
+$$\tag{Eq 1.1}\frac{-d(p(x))}{dx}  \propto (x-\mu)p(x)$$
 
 Adding constant of proportionality
-$$\frac{d(p(x)}{dx} = -k(x-\mu)(p(x))$$
+$$\frac{d(p(x))}{dx} = -k(x-\mu)(p(x))$$
 
 $$\tag{Eq. 1.2}\frac{1}{p(x)}  d(p(x)) = -k(x-\mu)dx$$
 
@@ -68,9 +68,9 @@ $$\tag{Eq. 1.2}\frac{1}{p(x)}  d(p(x)) = -k(x-\mu)dx$$
 
 Integrate Both sides
 
-$$\tag{Eq 2.1}\int \frac{1}{p(x)} dx = \int -k(x-\mu)dx$$
+$$\tag{Eq 2.1}\int \frac{1}{p(x)} d(p(x)) = \int -k(x-\mu)dx$$
 
-$$\int \frac{1}{p(x)} dx = -k\int (x-\mu)dx$$
+$$\int \frac{1}{p(x)} d(p(x)) = -k\int (x-\mu)dx$$
 
 I have used substitution in the next stage, while it is unnecessary, doing it here keeps the formula nice and tidy.
 
