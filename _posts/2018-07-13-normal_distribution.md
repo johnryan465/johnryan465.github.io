@@ -45,9 +45,9 @@ We will also be using some of the properties of all P.D.Fs in this derivation.
 We will need to translate each of these properties to mathematical notation.
 
 
-$$\tag{A1}\frac{-d(p(x)}{dx} \propto  (x-\mu)$$
+$$\tag{A1}\frac{-d(p(x))}{dx} \propto  (x-\mu)$$
 
-$$\tag{A2}\frac{-d(p(x)}{dx}  \propto p(x)$$
+$$\tag{A2}\frac{-d(p(x))}{dx}  \propto p(x)$$
 
 $$\tag{A3}p(x) \geqslant 0 $$
 
