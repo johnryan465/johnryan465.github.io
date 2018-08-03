@@ -78,9 +78,9 @@ $$\tag{Eq. 2.2.1} \beta = x - \mu $$
 
 $$\tag{Eq. 2.2.2}d\beta = dx $$
 
-$$\tag{Eq. 2.2.3}\int \frac{1}{p(x)} dx = -k\int \beta d\beta$$
+$$\tag{Eq. 2.2.3}\int \frac{1}{p(x)} d(p(x)) = -k\int \beta d\beta$$
 
-$$\int \frac{1}{p(x)} dx = -k \frac{\beta^2}{2} + C $$
+$$\int \frac{1}{p(x)} d(p(x)) = -k \frac{\beta^2}{2} + C $$
 
 $$\tag{Eq. 2.2.4}\ln{p(x)} = -k \frac{(x-\mu)^2}{2} + C$$
 
