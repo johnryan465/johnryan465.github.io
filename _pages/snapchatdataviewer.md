@@ -3,7 +3,7 @@ title: "Snapchat Data Viewer"
 layout: splash
 excerpt: "Snapchat Data Viewer"
 sitemap: false
-permalink: /snapchatdataviewer.html
+permalink: /snapchatdataviewer
 author_profile: true
 ---
 

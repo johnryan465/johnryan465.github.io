@@ -3,7 +3,7 @@ title: "Papers"
 layout: splash
 excerpt: "Papers"
 sitemap: false
-permalink: /papers.html
+permalink: /papers
 author_profile: true
 ---
 

@@ -3,7 +3,7 @@ title: "Harassment Detection"
 layout: splash
 excerpt: "Harassment Detection"
 sitemap: false
-permalink: /harassmentdetection.html
+permalink: /harassmentdetection
 author_profile: true
 ---
 

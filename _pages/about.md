@@ -3,7 +3,7 @@ title: "About"
 layout: splash
 excerpt: "About Solaire.ie"
 sitemap: false
-permalink: /about.html
+permalink: /about
 author_profile: true
 ---
 

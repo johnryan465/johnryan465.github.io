@@ -1,10 +1,10 @@
 # main links links
 main:
   - title: "About"
-    url: /about.html
+    url: /about
   - title: "Papers"
-    url: /papers.html
+    url: /papers
   - title: "Harassment Detection"
-    url: /harassmentdetection.html
+    url: /harassmentdetection
   - title: "Snapchat Data Viewer"
-    url: /snapchatdataviewer.html
+    url: /snapchatdataviewer
