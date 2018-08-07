@@ -6,3 +6,5 @@ main:
     url: /papers.html
   - title: "Harassment Detection"
     url: /harassmentdetection.html
+  - title: "Snapchat Data Viewer"
+    url: /snapchatdataviewer.html
