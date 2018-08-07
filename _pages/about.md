@@ -7,4 +7,4 @@ permalink: /about
 author_profile: true
 ---
 
-_Solaire.ie_ is a Data Science / Machine Learning consultancy and development blog.
+_Solaire.ie_ is a website where I detail some of my projects, mostly maths and technology particularly the intersection of the two.
