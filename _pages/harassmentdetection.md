@@ -7,11 +7,14 @@ permalink: /harassmentdetection.html
 author_profile: true
 ---
 
-(Server is currently inactive)
 This is a Harassment Detection API built using deep neural networks.
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+It is being served via tensorflow.js
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0"> </script>
 <script src="assets/js/raphael-2.1.4.min.js"></script>
 <script src="assets/js/justgage.js"></script>
+<script src="assets/js/harassment_model.js"></script>
+
 <script>
     $(document).ready(function() {
         var g1 = new JustGage({
@@ -27,9 +30,10 @@ This is a Harassment Detection API built using deep neural networks.
         });
         $("#submit1").click(function(){
             console.log($("#text").val() );
-            $.get("http://35.166.201.150:5000/classify",{ text: $("#text").val() }, function(data, status){
-                g1.refresh(data);
-            });
+            t = (model.predict(to_one_hot_char($("#text").val())));
+            console.log(to_one_hot_char($("#text").val()).dataSync());
+            console.log(Array.from(t.dataSync())[0]);
+            g1.refresh(Array.from(t.dataSync())[0]);
         });
     });
 </script>
