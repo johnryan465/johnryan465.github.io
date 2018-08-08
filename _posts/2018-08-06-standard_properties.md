@@ -212,4 +212,4 @@ $$ \sigma_{x+y}^2 = \mu_{x^2} +\mu_{y^2} - (\mu_{x}^2 +\mu_{y}^2) $$
 
 $$ \sigma_{x+y}^2 = \mu_{x^2} - \mu_{x}^2 + \mu_{y^2} - \mu_{y}^2 $$
 
-$$ \sigma_{x+y}^2 = \sigma_x^2 - \sigma_y^2$$
+$$ \sigma_{x+y}^2 = \sigma_x^2 + \sigma_y^2$$
