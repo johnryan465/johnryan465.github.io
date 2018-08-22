@@ -5,8 +5,9 @@ const alphabet = "abcdefghijklmnopqrstuvwxyz@.!? ";
 const num_chars = alphabet.length+1;
 var model;
 async function init(){
-  model = await tf.loadModel('http://www.solaire.ie/assets/model/model.json');
-  console.log("Done")
+  console.log("Loading Model");
+  model = await tf.loadModel('https://www.solaire.ie/assets/model/model.json');
+  console.log("Done");
 }
 
 char_dict = {};
