@@ -1,7 +1,7 @@
 ---
 title: "Mean and variance"
 layout: single
-excerpt: ""
+excerpt: "Some simple properties"
 sitemap: false
 ---
 
