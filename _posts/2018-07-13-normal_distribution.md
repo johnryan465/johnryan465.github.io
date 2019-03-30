@@ -4,19 +4,7 @@ layout: single
 excerpt: "Where does the formula come from?"
 sitemap: false
 ---
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script
-src="https://code.jquery.com/jquery-3.3.1.js"
-integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 
 
@@ -31,9 +19,9 @@ $$ p(x) = \sqrt{\frac{1}{2\pi\sigma^2}} e^{\frac{-1}{2\sigma^2}(x - \mu)^2}  $$
 At first glance this function seems so complex that it may seem unlikely for it to occur naturally. However as we will show here it can be derived from simple properties.
 
 
-Lets call the P.D.F of the normal distribution $p(x)$
+Lets call the P.D.F of the normal distribution $$ p(x) $$
 
-There are 2 fundamental properties of $p(x)$ that we are going to use in its derivation.
+There are 2 fundamental properties of $$p(x)$$ that we are going to use in its derivation.
 1. The rate at which the probability of finding a value decreases is proportional to the distance from the mean.
 2. The rate at which the probability of finding a value decreases is proportional to the frequency themselves.
 
@@ -43,7 +31,6 @@ We will also be using some of the properties of all P.D.Fs in this derivation.
 4. The integral of the function from negative infinity to infinity is 1
 
 We will need to translate each of these properties to mathematical notation.
-
 
 $$\tag{A1}\frac{-d(p(x))}{dx} \propto  (x-\mu)$$
 
@@ -137,11 +124,11 @@ The product of two integrals where the two variables are not dependent and the b
 
 $$\tag{Eq. B1}M = \int_{a}^{b}f(x)dx \int_{c}^{d}g(y)dy$$
 
-If $\int_{a}^{b}f(x)dx$ is defined it will become a constant, so it can be brought inside the other integral.
+If $$\int_{a}^{b}f(x)dx$$ is defined it will become a constant, so it can be brought inside the other integral.
 
 $$\tag{Eq. B2}M =  \int_{c}^{d}\int_{a}^{b}f(x)dxg(y)dy$$
 
-$g(y)$ is a constant with respect to $\int_{a}^{b}f(x)dx$ so it can be brought inside the integral.
+$$g(y)$$ is a constant with respect to $$\int_{a}^{b}f(x)dx$$ so it can be brought inside the integral.
 
 $$\tag{Eq. B3}M =  \int_{c}^{d}\int_{a}^{b}f(x)g(y)dxdy$$
 
@@ -157,34 +144,37 @@ $$\tag{Eq. B4}\int \int_{D} g(x,y)dA = \int \int_{D*}g(T(u,v))|detDt(u,v)|dudv$$
 
 We are going to transform it from using Cartesian coordinates to polar coordinates
 
-Let $T$ be the function which does the transformation.
+Let $$T$$ be the function which does the transformation.
+
 $$\tag{Eq. 5.1}(x,y) = T(u,v)$$
 
-The $(x,y)$ are the coordinates of the original regon we are working width
-$(u,v)$ are the new coordinates we are changing to, for polar coordinates these are $(r,\theta)$
+The $$(x,y)$$ are the coordinates of the original region we are working with.
+$$(u,v)$$ are the new coordinates we are changing to, for polar coordinates these are $$(r,\theta)$$
 
-This means that $\tag{Eq. 5.2}T(r,\theta) = (rcos\theta . rsin\theta)$
+This means that
 
-$DT(r,\theta)$ is the derivative matrix of T
+$$ \tag{Eq. 5.2}T(r,\theta) = (rcos\theta . rsin\theta) $$
+
+$$DT(r,\theta)$$ is the derivative matrix of T
 
 ### What is a derivative matrix?
 It is a generalization of the derivative of a single valued function.
 Lets start with a simple function.
 
-Let $f(a): R\rightarrow R$
+Let $$f(a): R\rightarrow R$$
 
 $$\tag{Eq. C1}Df(a) = \begin{bmatrix} \frac{df}{dx} \end{bmatrix} $$
 
 The derivative matrix of single input, single output function is just a matrix with a single entry which is the derivative of the function.
 
-Let $g(a): R^N\rightarrow R$
+Let $$g(a): R^N\rightarrow R $$
 
 $$\tag{Eq. C2}Dg(a) = \begin{bmatrix} \frac{ \partial f}{ \partial x_1} & \frac{ \partial f}{ \partial x_2} & \frac{ \partial f}{ \partial x_3} & \ldots &\frac{ \partial f}{ \partial x_n} \end{bmatrix} $$
 
 The derivative matrix of function with multiple inputs and a single output is a matrix with 1 row with an entry each input which is the partial derivative of the output of the function with respect to that input.
 
 
-Let $h(a): R^N\rightarrow R^M$
+Let $$h(a): R^N\rightarrow R^M$$
 
 $$\tag{Eq. C3} Dh(a) =\begin{bmatrix} \frac{ \partial f_1}{ \partial x_1} & \frac{ \partial f_1}{ \partial x_2} & \frac{ \partial f_1}{ \partial x_3} & \ldots &\frac{ \partial f_1}{ \partial x_n} \\
 \frac{ \partial f_2}{ \partial x_1} & \frac{ \partial f_2}{ \partial x_2} & \frac{ \partial f_2}{ \partial x_3} & \ldots &\frac{ \partial f_2}{ \partial x_n}\\
@@ -194,7 +184,7 @@ $$\tag{Eq. C3} Dh(a) =\begin{bmatrix} \frac{ \partial f_1}{ \partial x_1} & \fra
 
 The derivative matrix of function with multiple inputs and multiple outputs is a matrix with row for each output, with an entry on each row for each input which is the partial derivative of the output of that row with respect to that input.
 
-So what is the derivative matrix of the function $T$?
+So what is the derivative matrix of the function $$T$$?
 
 $$\tag{Eq. 5.4}f_1 = rcos\theta, f_2 = rsin\theta, x_1 = r, x_2 = \theta$$
 
@@ -213,7 +203,7 @@ $$\tag{Eq. 5.6.4} \frac{ \partial rsin\theta}{ \partial \theta} = rcos\theta$$
 $$\tag{Eq. 5.6.5} DT(r,\theta) = \begin{bmatrix}   cos\theta& -rsin\theta \\
 rsin\theta & rcos\theta \end{bmatrix}$$
 
-$det$ is the determinant of a matrix. The determinant of a matrix can be viewed as the scaling factor of a linear transformation.
+$$det$$ is the determinant of a matrix. The determinant of a matrix can be viewed as the scaling factor of a linear transformation.
 
 $$\tag{Eq. C4} det\begin{bmatrix}   a&b \\
 c&d\end{bmatrix} = ad - bc$$
@@ -254,7 +244,7 @@ $$\tag{Eq. 6.2.8}I^2= \frac{\pi}{2k} $$
 
 $$\tag{Eq. 6.2.9}I= \pm\sqrt{\frac{\pi}{2k}} $$
 
-The sign of h will be the same as the sign of I. As $p(x) \geqslant 0$ for all values of x. This means $h \geqslant	 0$ and therefore $I \geqslant 0$. Therefore we reject the negative solution for $I$.
+The sign of h will be the same as the sign of I. As $$ p(x) \geqslant 0 $$ for all values of x. This means $$h \geqslant	 0$$ and therefore $$ I \geqslant 0 $$ . Therefore we reject the negative solution for $$ I $$.
 
 $$\tag{Eq. 7.1.1}I= \sqrt{\frac{\pi}{2k}} $$
 
@@ -292,7 +282,7 @@ The definition of variance
 
 $$\tag{Eq. C6}\sigma^2 = \int_{-\infty}^{\infty}(x-\mu)^2f(x)dx$$
 
-In our case our function is $p(x)$  
+In our case our function is $$p(x)$$  
 
 
 $$\tag{Eq. 8.1} \sigma^2 = \int_{-\infty}^{\infty}(x-\mu)^2p(x)dx$$
@@ -360,7 +350,8 @@ Now we substitute in the correct variables
 
 $$\tag{Eq. 9.3.1}J = 2\left( \left[ L\int L e^{\frac{-k}{2}L^2} dL \right]_{0}^{\infty} - \int_{0}^{\infty} \left(\int L e^{\frac{-k}{2}L^2} dL)(1) dL \right) \right)$$
 
-Lets label the internal integral $F$ to simpilfiy our expression
+Lets label the internal integral $$F$$ to simpilfiy our expression
+
 $$\tag{Eq. 9.3.2}F =\int L e^{\frac{-k}{2}L^2} dL $$
 
 $$\tag{Eq. 9.3.3}J = 2\left( \left[ LF \right]_{0}^{\infty} - \int_{0}^{\infty} F dL  \right)$$
@@ -395,7 +386,7 @@ $$\tag{Eq. 11.2} J = 2\left( \left[ \frac{-L}{k} e^{\frac{-k}{2}L^2} + LC \right
 
 $$\tag{Eq. 11.3} J = 2\left( \left[ \frac{-L}{k} e^{\frac{-k}{2}L^2}\right]_{0}^{\infty} + \left[LC \right]_{0}^{\infty} + \frac{1}{k}\int_{0}^{\infty}  e^{\frac{-k}{2}L^2}dL - \left[ LC \right]_{0}^{\infty} \right)$$
 
-We have already evaluated the internal integral at ${Eq. 7.1.1}$
+We have already evaluated the internal integral at $${Eq. 7.1.1}$$
 
 $$\tag{Eq. 7.1.1} \int_{0}^{\infty}  e^{\frac{-k}{2}L^2}dL = \sqrt{\frac{\pi}{2k}}$$
 
@@ -409,7 +400,7 @@ $$\tag{Eq. 11.4.4} J = 2\left( \frac{1}{k}\sqrt{\frac{\pi}{2k}}  \right)$$
 
 $$\tag{Eq. 11.4.5} J = \left( \frac{2\sqrt{\pi}}{k\sqrt{2k}}  \right)$$
 
-Now that we have solved for J we can go back and finish evaluating ${Eq. 8.3.5}$
+Now that we have solved for J we can go back and finish evaluating $${Eq. 8.3.5}$$
 
 $$\tag{Eq. 8.3.5}\sigma^2 = \sqrt{\frac{k}{2\pi}}J$$
 
@@ -423,7 +414,7 @@ $$\tag{Eq. 12.3}\sigma^2 = \frac{1}{k} $$
 
 $$\tag{Eq. 12.4}k = \frac{1}{\sigma^2} $$
 
-Back to our P.M.F at ${Eq. 7.2}$
+Back to our P.M.F at $${Eq. 7.2}$$
 
 $$\tag{Eq. 13.1} p(x) = \sqrt{\frac{\frac{1}{\sigma^2}}{2\pi}} e^{\frac{-\frac{1}{\sigma^2}}{2}(x - \mu)^2}  $$
 

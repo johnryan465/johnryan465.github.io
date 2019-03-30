@@ -165,12 +165,13 @@ paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-plugins:
+plugins_dir:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+
 
 whitelist:
   - jekyll-paginate
@@ -190,3 +191,5 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+gems: [jekyll-paginate]

@@ -5,15 +5,7 @@ excerpt: "Some simple properties"
 sitemap: false
 ---
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 <script
 src="https://code.jquery.com/jquery-3.3.1.js"
 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -53,12 +45,12 @@ $$\mu = \int_{-\infty}^{\infty}p(x)x dx $$
 
 ##### What happens to the mean when we add a constant to the random variable?
 
-Let $X$ be a random variable and $\mu_{X}$ is the mean of its distribution.
-If $A$ is a constant and it is added to $X$, the mean of the new random variable is $\mu_{X} + A$, while this may seem obvious we should prove it for completeness sake.
+Let $$X$$ be a random variable and $$\mu_{X}$$ is the mean of its distribution.
+If $$A$$ is a constant and it is added to $$X$$, the mean of the new random variable is $$\mu_{X} + A$$, while this may seem obvious we should prove it for completeness sake.
 
-Every element $X_n$ drawn from the distribution will now be equal to $X_n + A$. We can go back to our formula for the mean $$\mu_{x} = \sum p_i x_i$$
+Every element $$X_n$$ drawn from the distribution will now be equal to $$X_n + A$$. We can go back to our formula for the mean $$\mu_{x} = \sum p_i x_i$$
 
-When $A$ is added to the distribution we can replace $X$ with $X+A$.
+When $$A$$ is added to the distribution we can replace $$X$$ with $$X+A$$.
 
 $$\mu_{x+A} = \sum p_i(x_i+A)$$
 
@@ -68,7 +60,7 @@ $$\mu_{x+A} = \mu_{x} + \sum p_i A$$
 
 $$\mu_{x+A} = \mu_{x} + A\sum p_i$$
 
-And because $p$ is a PDF the $\sum p_i = 1$
+And because $$p$$ is a PDF the $$\sum p_i = 1$$
 
 $$\mu_{x+A} = \mu_{x} + A(1)$$
 
@@ -77,12 +69,12 @@ $$\mu_{x+A} = \mu_{x} + A$$
 
 ##### What happens to the mean when we multiply a constant by the random variable?
 
-Let $X$ be a random variable and $\mu_{X}$ is the mean of its distribution.
-If $B$ is a constant and it is multiplied by $X$, the mean of the new random variable is $B\mu_{X}$, again we will prove it for completeness sake.
+Let $$X$$ be a random variable and $$\mu_{X}$$ is the mean of its distribution.
+If $$B$$ is a constant and it is multiplied by $$X$$, the mean of the new random variable is $$B\mu_{X}$$, again we will prove it for completeness sake.
 
-Every element $X_n$ drawn from the distribution will now be equal to $BX_n$. We can go back to our formula for the mean $$\mu_x = \sum p_i x_i$$
+Every element $$X_n$$ drawn from the distribution will now be equal to $$BX_n$$. We can go back to our formula for the mean $$\mu_x = \sum p_i x_i$$
 
-When $B$ is multiplied by the distribution we can replace $X$ with $BX$.
+When $$B$$ is multiplied by the distribution we can replace $$X$$ with $$BX$$.
 
 $$\mu_{Bx} = \sum p_i(Bx_i)$$
 
@@ -102,7 +94,7 @@ Similarly for continuous random variables it is:
 
 $$ \sigma_{X}^2 = \int_{-\infty}^{\infty} (x_i - \mu_x)^2 p_i $$
 
-THe standard deviation is the square root of the variance. ie $\sigma_x$
+THe standard deviation is the square root of the variance. ie $$\sigma_x$$
 
 ##### How does the variance change when a constant is added the the distribution?
 
@@ -110,7 +102,7 @@ $$ \sigma_{x}^2 = \sum (x_i - \mu_x)^2 p_i $$
 
 $$ \sigma_{x+A}^2 = \sum((x_i + A) - \mu_{x+A})^2 p_i$$
 
-From above we know that $\mu_{x+A} = \mu_{x} + A $
+From above we know that $$\mu_{x+A} = \mu_{x} + A $$
 
 $$ \sigma_{x+A}^2 = \sum(x_i + A - \mu_{x} + A)^2 p_i$$
 
@@ -131,7 +123,7 @@ $$ \sigma_{x}^2 = \sum (x_i^2 - 2 x_i \mu_x +\mu_x^2) p_i $$
 
 $$ \sigma_{Bx}^2 = \sum(Bx_i - \mu_{Bx})^2 p_i$$
 
-From above we know that $\mu_{Bx} = B\mu_{x}$
+From above we know that $$\mu_{Bx} = B\mu_{x}$$
 
 $$ \sigma_{Bx}^2 = \sum(Bx_i - B\mu_{x})^2 p_i$$
 
@@ -148,7 +140,7 @@ $$ \sigma_{Bx}^2 = B^2\sigma_{x}^2 $$
 
 ##### Sum of independent variables
 
-Take two independent random variables $x$ and $y$ with variances $\sigma_y^2$ and $\sigma_y^2$ respectively.
+Take two independent random variables $$x$$ and $$y$$ with variances $$\sigma_y^2$$ and $$\sigma_y^2$$ respectively.
 
 What is the variance of the various combinations of these variables?
 
@@ -156,9 +148,9 @@ What is the variance of the various combinations of these variables?
 
 $$ \sigma_{x+y}^2 = \sum ((x+y)_i - \mu_{x+y})^2 p_i $$
 
-To work this out we will be separating out all the different combinations of $x$ and $y$.
-Think about it as creating 2 different 2d grids, 1 for the probability of getting that particular pair of elements from $x$ and $y$ and then the other which is the sum of that $x$ and $y$.
-If there are $n$ possible elements from $x$ and $m$ from $y$ each of these grids will have $n*m$ elements.
+To work this out we will be separating out all the different combinations of $$x$$ and $$y$$.
+Think about it as creating 2 different 2d grids, 1 for the probability of getting that particular pair of elements from $$x$$ and $$y$$ and then the other which is the sum of that $$x$$ and $$y$$.
+If there are $$n$$ possible elements from $$x$$ and $$m$$ from $$y$$ each of these grids will have $$n*m$$ elements.
 
 $$
 \begin{array}{l|l l l l}
@@ -183,7 +175,7 @@ y_5 & x_1+y_5 & x_2+y_5 & x_3+y_5 & x_4+y_5 & x_5+y_5
 $$
 
 As these two random variables are independent
- $p(x_i,y_j) = p(x_i)p(y_j)$
+ $$p(x_i,y_j) = p(x_i)p(y_j)$$
 
 Lets manipulate the formula for variance to make it easier to work with
 $$ \sigma_{z}^2 = \sum_z (z_i - \mu_{z})^2 p_i $$
