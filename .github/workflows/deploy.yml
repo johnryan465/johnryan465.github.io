@@ -28,3 +28,4 @@ jobs:
           external_repository: johnryan465/johnryan465.github.io
           publish_branch: master
           publish_dir: ./public
+          cname: johnryan.tech
