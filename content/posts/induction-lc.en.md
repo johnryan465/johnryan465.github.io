@@ -46,6 +46,8 @@ In the second part we show that our problem is true for a specific number $s$. T
 
 Then we can combine these 2 parts to show that $P(s)$ is true for all numbers $\geq s$.
 
+Using the fact that $P(s)$ is true and $P(k) \implies P(k+1)$ we get that $P(s+1)$ is true. We can repeat this to get that $P(s+2),P(s+3),\ldots$ are all true.
+
 We can visualise this with the following diagram.
 Each dot is a something we have shown is true, the arrows indicate how we have show it to be true.
 ```viz-dot
