@@ -24,7 +24,10 @@ The most varied type of proof that you will get are the __proofs by induction__.
 Often when induction is being explained to students (or being rushed through :/) the idea of induction itself isn't proper separated from a specific way of writing an inductive proof. The idea itself is super powerful and actually quite simple.
 
 
-Lets take the following as an example. We want to show that something is true  $1 + 3 + \ldots + (2n-1) = n^2$ for all the natural numbers (or we could say it like this if you like using the more formal maths notation $\forall n \in \mathbb{N}:1 + 3 + \ldots + (2n-1) = n^2$)
+Lets take the following as an example. We want to show that something is true  
+$1 + 3 + \ldots + (2n-1) = n^2$ for all the natural numbers.
+Or we could say it like this if you like using the more formal maths notation
+$\forall n \in \mathbb{N}:1 + 3 + \ldots + (2n-1) = n^2$
 
 How can we show this for all of the natural numbers? We know that there is an infinite number of them, so even if we tested for the first $100$ numbers there could be a bigger number that we just haven't tested that it could be false for.
 
@@ -35,7 +38,10 @@ __Note:__ As far as I can tell from checking the syllabus weak induction is the 
 
 The idea behind induction is that we solve the problem in 2 different parts.
 
-We have the statement $P(n)$, which we are trying to show is true. For example if we are using the example above $P(n) : 1 + 3 + \ldots + (2n-1) = n^2$. For a specific value of $n$ this statement is going to be true or false. And this can simply be checked by calculating both sides and checking if they are equal.
+We have the statement $P(n)$, which we are trying to show is true. For example if we are using the example above:
+$P(n) : 1 + 3 + \ldots + (2n-1) = n^2$
+
+For a specific value of $n$ this statement is going to be true or false. And this can simply be checked by calculating both sides and checking if they are equal.
 
 In the first part we come up with a proof for showing that if $P$ is true for a specific number $k$ that we can show that it is true for $k+1$.
 Or in more formal maths terms we want a proof of $P(k) \implies P(k+1)$
