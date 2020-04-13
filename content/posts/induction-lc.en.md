@@ -66,7 +66,7 @@ digraph induction {
     b  -> b1 [ label = "Inductive Step" ];
     b1  -> b2 [ label = "Inductive Step" ];
     node [shape = point];
-    b2 -> b3[ label = "Inductive Step" ];
+    b2 -> b3[ label = "I.S" ];
     a -> b [ label = "Base Case" ];
 }
 ```
