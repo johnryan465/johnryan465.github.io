@@ -21,7 +21,7 @@ The most varied type of proof that you will get are the __proofs by induction__.
 
 ### Intuition
 
-Often when induction is being explained to students (or being rushed through :/) the idea of induction itself isn't proper separated from a specific way of writing an inductive proof. The idea itself is super powerful and actually quite simple.
+Often when induction is being explained to students (or being rushed through :/) the idea of induction itself isn't properly separated from a specific way of writing an inductive proof. The idea itself is super powerful and actually quite simple.
 
 
 Lets take the following as an example. We want to show that something is true  
