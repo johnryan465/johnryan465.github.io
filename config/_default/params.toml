@@ -2,7 +2,7 @@ logoText = "johnryan.tech" # Logo text that appears in the site navigation bar.
 logoType = "short" # long, short -> short: squre shape includes logo text, long: rectangle shape not includes logo text
 logo = true # Logo that appears in the site navigation bar.
 description = "The Zzo theme for Hugo example site." # for SEO
-custom_css = [] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
+custom_css = ["css/katex-wrap.css"] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
 useFaviconGenerator = false # https://www.favicon-generator.org/
 languagedir = "ltr" # ltr / rtl
@@ -28,8 +28,8 @@ enableThemeChange = false # site color theme
 
 # body
 enableBreadcrumb = true # breadcrumb for list, single page
-enableSearch = false # site search with Fuse
-enableSearchHighlight = false # when true, search keyword will be highlighted
+enableSearch = true # site search with Fuse
+enableSearchHighlight = true # when true, search keyword will be highlighted
 enableGoToTop = true # scroll to top
 enableWhoami = true # at the end of single page
 summaryShape = "classic" # card, classic, compact
