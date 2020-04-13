@@ -4,6 +4,7 @@ date: 2020-04-13T14:07:33Z
 draft: false
 libraries:
 - katex
+- viz
 tags:
 - leaving cert
 ---
@@ -22,15 +23,90 @@ The most varied type of proof that you will get are the __proofs by induction__.
 
 Often when induction is being explained to students (or being rushed through :/) the idea of induction itself isn't proper separated from a specific way of writing an inductive proof. The idea itself is super powerful and actually quite simple.
 
-#### Induction explained with trains
+
+Lets take the following as an example. We want to show that something is true  $1 + 3 + \ldots + (2n-1) = n^2$ for all the natural numbers (or we could say it like this if you like using the more formal maths notation $\forall n \in \mathbb{N}:1 + 3 + \ldots + (2n-1) = n^2$)
+
+How can we show this for all of the natural numbers? We know that there is an infinite number of them, so even if we tested for the first $100$ numbers there could be a bigger number that we just haven't tested that it could be false for.
 
 
-We are going to completely move away from over burdening you with mathematical notation, and work with the idea of train carriages.
+### Induction
 
-Lets imagine we have train carriages that can attach to each other and each weights $1000kg$.
+__Note:__ As far as I can tell from checking the syllabus weak induction is the only form of induction needed for the leaving certificate. From here on out I will just call it induction.
 
-How could you go about trying to prove that if a train has $\geq 4$ carriages that it weights at least $4000kg$?
+The idea behind induction is that we solve the problem in 2 different parts.
 
-This is artificially really, really straightforward but the question remains how could you prove it? We could show that a train with $4$ carriages would weigh $4000kg$ and then say well then if we add anymore carriages it can only get heavier and not lighter.
+We have the statement $P(n)$, which we are trying to show is true. For example if we are using the example above $P(n) : 1 + 3 + \ldots + (2n-1) = n^2$. For a specific value of $n$ this statement is going to be true or false. And this can simply be checked by calculating both sides and checking if they are equal.
 
-But we have no limits on how many carriages we can add to our train! How can we show that it will never end up getting lighter? Again its very obvious that this is the case but how could you prove it?
+In the first part we come up with a proof for showing that if $P$ is true for a specific number $k$ that we can show that it is true for $k+1$.
+Or in more formal maths terms we want a proof of $P(k) \implies P(k+1)$
+
+Lets call this "sub proof" the ___inductive step___.
+
+In the second part we show that our problem is true for a specific number $s$. This is showing that $P(s)$ is true. This can be as simple as calculating what the statement says is equal and just checking. Lets call this part of the proof ___base case___.
+
+Then we can combine these 2 parts to show that $P(s)$ is true for all numbers $\geq s$.
+
+We can visualise this with the following diagram.
+Each dot is a something we have shown is true, the arrows indicate how we have show it to be true.
+```dot
+digraph induction {
+    rankdir=LR;
+    node [shape = circle];
+    b [label="P(s)"]
+    b1 [label="P(s+1)"]
+    b2 [label="P(s+2)"]
+    b  -> b1 [ label = "Inductive Step" ];
+    b1  -> b2 [ label = "Inductive Step" ];
+    node [shape = point];
+    b2 -> b3[ label = "Inductive Step" ];
+    a -> b [ label = "Base Case" ];
+}
+```
+
+This is what induction is, the particular way you write it shouldn't matter too much.
+
+Notice how the arrows follow a nice line with no loops? This makes the argument sensible, if you make a mistake and in your argument and the implication arrows form loops your "argument is going around in circles".
+
+__Aside:__ Not needed for leaving certificate but strong induction is when that graph we just drew would be more complicated, but still with no loops. Imagine if your proof for the next case to be true relied on both of the previous values being true.
+
+```dot
+digraph induction {
+    rankdir=LR;
+    node [shape = circle];
+    b [label="P(s)"]
+    b  -> b2 [ label = "Inductive Step" ];
+    b1 [label="P(s+1)"]
+    b2 [label="P(s+2)"]
+    b1  -> b2 [ label = "Inductive Step" ];
+    node [shape = point];
+    b2 -> b3[ label = "Inductive Step" ];
+    a -> b [ label = "Base Case" ];
+    c -> b1 [ label = "Base Case" ];
+}
+```
+
+### How to write an inductive proof
+
+With the understanding of what induction is and how it works under our belts lets see how to write a proof. While the induction is reasonably straightforward, it builds quite a bit on writing of other types of proofs and algebra so it might be worth revising those if you are finding this part tough.
+
+We will use the example problem from above in this example.
+#### Step 1: Write down you problem
+
+While this might seem stupid to put as its own step this is where I see most people go wrong, you don't want to be stuck on a problem because you took it down wrong.
+
+To prove: $\forall n \in \mathbb{N}:1 + 3 + \ldots + (2n-1) = n^2$
+
+#### Step 2: The inductive step
+
+We assume that $P(k)$ is true, from this we need to show that $P(k+1)$ is true.
+
+$$1 + 3 + \ldots + (2k-1) = k^2  \tag{P(k)}$$
+
+
+$$\begin{aligned}
+1 + 3 + \ldots + (2k-1) + (2k+1) &= 1 + 3 + \ldots + (2k-1) + (2k+1)\\
+1 + 3 + \ldots + (2k+1) &= k^2 + (2k+1) \tag{We have subsited in P(K)} \\
+1 + 3 + \ldots + \left(2(k+1)-1\right) &= (k+1)^2 \\
+\end{aligned}$$
+
+We have now shown that $P(k) \implies P(k+1)$, we have now completed the inductive step.
