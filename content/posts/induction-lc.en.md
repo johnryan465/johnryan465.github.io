@@ -1,0 +1,36 @@
+---
+title: "Induction for the Leaving Cert"
+date: 2020-04-13T14:07:33Z
+draft: false
+libraries:
+- katex
+tags:
+- leaving cert
+---
+
+This is going to be possibly the first in a series of posts primarily aimed at for leaving cert students who are currently missing out on school due to COVID-19 but still have exams.
+
+These will be aimed at helping you to understand a concept so you don't need to rely on rote learning (I always found that quite difficult personally)
+
+## Proof by Induction
+
+Proofs are core to maths and are a reasonably reliable part of the Leaving Cert Maths papers.
+
+The most varied type of proof that you will get are the __proofs by induction__.
+
+### Intuition
+
+Often when induction is being explained to students (or being rushed through :/) the idea of induction itself isn't proper separated from a specific way of writing an inductive proof. The idea itself is super powerful and actually quite simple.
+
+#### Induction explained with trains
+
+
+We are going to completely move away from over burdening you with mathematical notation, and work with the idea of train carriages.
+
+Lets imagine we have train carriages that can attach to each other and each weights $1000kg$.
+
+How could you go about trying to prove that if a train has $\geq 4$ carriages that it weights at least $4000kg$?
+
+This is artificially really, really straightforward but the question remains how could you prove it? We could show that a train with $4$ carriages would weigh $4000kg$ and then say well then if we add anymore carriages it can only get heavier and not lighter.
+
+But we have no limits on how many carriages we can add to our train! How can we show that it will never end up getting lighter? Again its very obvious that this is the case but how could you prove it?
