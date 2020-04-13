@@ -102,7 +102,7 @@ originUl.parentNode.replaceChild(ul,originUl);}});</script><link rel=stylesheet 
     b  -&gt; b1 [ label = &quot;Inductive Step&quot; ];
     b1  -&gt; b2 [ label = &quot;Inductive Step&quot; ];
     node [shape = point];
-    b2 -&gt; b3[ label = &quot;Inductive Step&quot; ];
+    b2 -&gt; b3[ label = &quot;I.S&quot; ];
     a -&gt; b [ label = &quot;Base Case&quot; ];
 }
 </code></pre><p>This is what induction is, the particular way you write it shouldn&rsquo;t matter too much.</p><p>Notice how the arrows follow a nice line with no loops? This makes the argument sensible, if you make a mistake and in your argument and the implication arrows form loops your &ldquo;argument is going around in circles&rdquo;.</p><p><strong>Aside:</strong> Not needed for leaving certificate but strong induction is when that graph we just drew would be more complicated, but still with no loops. Imagine if your proof for the next case to be true relied on both of the previous values being true.</p><pre><code class=language-viz-dot data-lang=viz-dot>digraph induction {
