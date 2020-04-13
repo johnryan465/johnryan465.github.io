@@ -48,7 +48,7 @@ Then we can combine these 2 parts to show that $P(s)$ is true for all numbers $\
 
 We can visualise this with the following diagram.
 Each dot is a something we have shown is true, the arrows indicate how we have show it to be true.
-```dot
+```viz-dot
 digraph induction {
     rankdir=LR;
     node [shape = circle];
@@ -69,7 +69,7 @@ Notice how the arrows follow a nice line with no loops? This makes the argument 
 
 __Aside:__ Not needed for leaving certificate but strong induction is when that graph we just drew would be more complicated, but still with no loops. Imagine if your proof for the next case to be true relied on both of the previous values being true.
 
-```dot
+```viz-dot
 digraph induction {
     rankdir=LR;
     node [shape = circle];
@@ -103,10 +103,25 @@ We assume that $P(k)$ is true, from this we need to show that $P(k+1)$ is true.
 $$1 + 3 + \ldots + (2k-1) = k^2  \tag{P(k)}$$
 
 
-$$\begin{aligned}
-1 + 3 + \ldots + (2k-1) + (2k+1) &= 1 + 3 + \ldots + (2k-1) + (2k+1)\\
-1 + 3 + \ldots + (2k+1) &= k^2 + (2k+1) \tag{We have subsited in P(K)} \\
-1 + 3 + \ldots + \left(2(k+1)-1\right) &= (k+1)^2 \\
-\end{aligned}$$
+$$\begin{aligned} 1 + 3 + \ldots + (2k-1) + (2k+1) &= 1 + 3 + \ldots + (2k-1) + (2k+1) \\\ 1 + 3 + \ldots + (2k+1) &= k^2 + (2k+1) \\\ 1 + 3 + \ldots + \left(2(k+1)-1\right) &= (k+1)^2 \\\ \end{aligned}$$
 
 We have now shown that $P(k) \implies P(k+1)$, we have now completed the inductive step.
+
+#### Step 3: The base case
+
+We simply need to test that $P(1)$ is true.
+
+$$1 = 1^2 \tag{True} $$
+
+We have now completed the base case.
+
+#### Step 4: Putting it together
+
+As induction is widely understood we don't need to explain it when we use it.
+
+ $P(1)$ is true and $P(k) \implies P(k+1)$ therefore by induction $P(n)$ is true for all $n \in \mathbb{N}$
+
+
+### Conclusion
+
+I hope that this has been helpful to you and if you have any questions or any other topics you would like me to cover you can message me at @john_pryan on twitter.
