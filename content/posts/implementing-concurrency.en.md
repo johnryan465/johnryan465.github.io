@@ -2,6 +2,11 @@
 title: "Implementing Concurrency"
 date: 2020-04-14T13:22:26Z
 draft: true
+libraries:
+- katex
+- viz
+tags:
+- machine learning
 ---
 
 When writing more performance critical code, sometimes if the problem lends itself to it we can reach into our toolbox use the weapons of concurrency to reach whatever goal we had set for performance.
