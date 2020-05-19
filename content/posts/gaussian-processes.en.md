@@ -2,6 +2,11 @@
 title: "Gaussian Processes"
 date: 2020-05-19T15:29:01Z
 draft: false
+libraries:
+- katex
+- viz
+tags:
+- machine learning
 ---
 
 ### TLDR
