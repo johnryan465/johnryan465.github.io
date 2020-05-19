@@ -17,7 +17,7 @@ Gaussian Processes can be used to predict unknown values of a function, using kn
 
 (From wikipedia)
 
-A time continuous schochastic process $\left\{ X_t ; t \in T \right\} $ is Gaussian iff for every finite set of indices $t_1,\ldots ,t_k  \in T$
+A time continuous schochastic process $ \left\{ X_t ; t \in T \right\} $ is Gaussian iff for every finite set of indices $t_1,\ldots ,t_k  \in T$
 
 $$X_{t_1,\ldots, t_k} = \left(X_{t_1} , \ldots,  X_{t_k} \right)$$
 
