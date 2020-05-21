@@ -45,7 +45,6 @@ We also need a prior for the means of each of these variables.
 
 We now have an prior for values of a function at a set of points.
 
-
 If we have some data-points we can condition over knowing their values $\left((x_i, y_i), \ldots \right)$ to get a posterior distribution over the remainder of them.
 
- We can model epistemic uncertainty of measurements by not conditioning over knowing the exact value but by conditioning over $x_i$ being distributed via $N(y_i, \sigma^2)$ for some noise parameter $\sigma$.
+We can model epistemic uncertainty of measurements by not conditioning over knowing the exact value but by conditioning over $x_i$ being distributed via $N(y_i, \sigma^2)$ for some noise parameter $\sigma$.
