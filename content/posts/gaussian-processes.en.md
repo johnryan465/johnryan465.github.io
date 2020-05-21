@@ -17,7 +17,7 @@ Gaussian Processes can be used to predict unknown values of a function, using kn
 
 (From wikipedia)
 
-A time continuous schochastic process $ \left\{ X_t ; t \in T \right\} $ is Gaussian iff for every finite set of indices $t_1,\ldots ,t_k  \in T$
+A time continuous schochastic process $\left\{ X_t ; t \in T \right\}$ is Gaussian iff for every finite set of indices $t_1,\ldots ,t_k  \in T$
 
 $$X_{t_1,\ldots, t_k} = \left(X_{t_1} , \ldots,  X_{t_k} \right)$$
 
@@ -48,3 +48,8 @@ We now have an prior for values of a function at a set of points.
 If we have some data-points we can condition over knowing their values $\left((x_i, y_i), \ldots \right)$ to get a posterior distribution over the remainder of them.
 
 We can model epistemic uncertainty of measurements by not conditioning over knowing the exact value but by conditioning over $x_i$ being distributed via $N(y_i, \sigma^2)$ for some noise parameter $\sigma$.
+
+
+## Technical
+
+$$ \in $$
