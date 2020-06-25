@@ -37,7 +37,7 @@ $$E\left[X_1\ldots X_n \right] = \sum_{p \in P^2_n} \prod_{\{i,j\} \in P} E\left
 
 where the sum is over all the pairings of $\left( 1, \ldots, n\right)$
 
-Note: This implies that if $n \in 2\mathbf{N} + 1$, as we will have no valid pairings that our expectation will be 0.
+Note: This implies that if $n \in 2\mathbf{N} + 1$ , as we will have no valid pairings that our expectation will be 0.
 
 This is close to what we want, but we unfortunely don't have a 0 mean normal vectors, we have arbitary finite means.
 
@@ -77,8 +77,7 @@ $$\begin{aligned} E\left[\left(X_1 - \mu_1 \right) \ldots \left(X_n - \mu_n \rig
 Let $n \in 2\mathbf{N} + 1$
 
 
-$$H(T)  = - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S)\\
- $$
+$$H(T)  = - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S)$$
 
 We replaced $I(T)$ with $0$ as mentioned previously.
 
