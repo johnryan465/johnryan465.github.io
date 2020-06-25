@@ -50,6 +50,5 @@ If we have some data-points we can condition over knowing their values $\left((x
 We can model epistemic uncertainty of measurements by not conditioning over knowing the exact value but by conditioning over $x_i$ being distributed via $N(y_i, \sigma^2)$ for some noise parameter $\sigma$.
 
 
-## Technical
+## Technical Details - Todo
 
-$$ \in $$
