@@ -72,15 +72,7 @@ We will refer to the elements of T as $\{1,\ldots,n\}$
 
 Let $n \in 2\mathbf{N}$
 
-$$
-\begin{aligned}
-E\left[\left(X_1 - \mu_1 \right) \ldots \left(X_n - \mu_n \right)\right] &= I\left(T\right)\\
-E\left[\sum_{S \subseteq T} \prod_{i \in T} \mathbb{1}(i \in S)X_i +  \mathbb{1}(i \notin S)\left(-\mu_i\right)  \right] &= I\left(T\right)\\
-\sum_{S \subseteq T} E\left[\prod_{i \in T} \mathbb{1}(i \in S)X_i +  \mathbb{1}(i \notin S)\left(-\mu_i\right)  \right] &= I\left(T\right)\\
-\sum_{S \subseteq T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)E\left[\prod_{i \in S} X_i    \right] &= I\left(T\right)\\
-\sum_{S \subseteq T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S) &= I\left(T\right)\\
-H(T) + \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S) &= I\left(T\right)\\
-H(T)  = I\left(T\right) - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S)\\
+$$\begin{aligned} E\left[\left(X_1 - \mu_1 \right) \ldots \left(X_n - \mu_n \right)\right] &= I\left(T\right)\\ E\left[\sum_{S \subseteq T} \prod_{i \in T} \mathbb{1}(i \in S)X_i +  \mathbb{1}(i \notin S)\left(-\mu_i\right)  \right] &= I\left(T\right)\\ \sum_{S \subseteq T} E\left[\prod_{i \in T} \mathbb{1}(i \in S)X_i +  \mathbb{1}(i \notin S)\left(-\mu_i\right)  \right] &= I\left(T\right)\\ \sum_{S \subseteq T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)E\left[\prod_{i \in S} X_i    \right] &= I\left(T\right)\\ \sum_{S \subseteq T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S) &= I\left(T\right)\\ H(T) + \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S) &= I\left(T\right)\\ H(T)  = I\left(T\right) - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S)\\
 \end{aligned}
 $$
 
@@ -102,11 +94,7 @@ Our base cases are defined.
 
 Lets calculate $H(T)$ with $T = \{1,2\}$.
 
-$$\begin{aligned}
-H(T)  &= I(T) - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S) \\
-H(\{1,2\})  &= I(\{1,2\}) - \left( \left(-\mu_1\right)H(\{2\}) + \left(-\mu_2\right)H(\{1\} + \mu_1 \mu_2) \right)\\
-H(\{1,2\})  &= I(\{1,2\})  + \mu_1 \mu_2\\
-\end{aligned}$$
+$$\begin{aligned} H(T)  &= I(T) - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S) \\ H(\{1,2\})  &= I(\{1,2\}) - \left( \left(-\mu_1\right)H(\{2\}) + \left(-\mu_2\right)H(\{1\} + \mu_1 \mu_2) \right)\\ H(\{1,2\})  &= I(\{1,2\})  + \mu_1 \mu_2\\ \end{aligned}$$
 
 We have an inductive hypothesis.
 
@@ -118,14 +106,7 @@ Now for the inductive steps.
 
 Case 1: $n \in 2\mathbb{N}$
 
-$$\begin{aligned}
-H(T)  &= I(T) - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S) \\
- &= I(T) - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)\sum_{D \subseteq S} \left(\prod_{i \in S \setminus D} \mu_i \right) I\left(D\right) \\
-  &= I(T) - \sum_{S \subset T} \left(\prod_{i  \in T \setminus S} \left(-\mu_i\right) \right)\sum_{D \subseteq S} \left(\prod_{i \in S \setminus D} \mu_i \right) I\left(D\right) \\
-  &= I(T) - \sum_{S \subset T} \sum_{D \subseteq S} \left(\prod_{i  \in T \setminus S} \left(-\mu_i\right) \right)\left(\prod_{i \in S \setminus D} \mu_i \right) I\left(D\right) \\
-&= I(T) - \sum_{S \subset T} \sum_{D \subseteq S} (-1)^{\#T \setminus S }\left(\prod_{i  \in T \setminus S} \mu_i \right)\left(\prod_{i \in S \setminus D} \mu_i \right) I\left(D\right) \\
-&= I(T) - \sum_{S \subset T} \sum_{D \subseteq S} (-1)^{\#T \setminus S }\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
-\end{aligned}$$
+$$\begin{aligned} H(T)  &= I(T) - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S) \\ &= I(T) - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)\sum_{D \subseteq S} \left(\prod_{i \in S \setminus D} \mu_i \right) I\left(D\right) \\ &= I(T) - \sum_{S \subset T} \left(\prod_{i  \in T \setminus S} \left(-\mu_i\right) \right)\sum_{D \subseteq S} \left(\prod_{i \in S \setminus D} \mu_i \right) I\left(D\right) \\ &= I(T) - \sum_{S \subset T} \sum_{D \subseteq S} \left(\prod_{i  \in T \setminus S} \left(-\mu_i\right) \right)\left(\prod_{i \in S \setminus D} \mu_i \right) I\left(D\right) \\ &= I(T) - \sum_{S \subset T} \sum_{D \subseteq S} (-1)^{\#T \setminus S }\left(\prod_{i  \in T \setminus S} \mu_i \right)\left(\prod_{i \in S \setminus D} \mu_i \right) I\left(D\right) \\ &= I(T) - \sum_{S \subset T} \sum_{D \subseteq S} (-1)^{\#T \setminus S }\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\ \end{aligned}$$
 
 In our nested summation we have $(-1)^{\#T \setminus S}$ times a term that only depends on $D$ and $T$ and not $S$.
 
@@ -134,28 +115,14 @@ As $S \subset T$, $1 \leq \#T \setminus S \leq n$
 For a fixed $T$ and $D$, with $\#D = m$. 
 
 
-$$\begin{aligned}
-H(T) &= I(T) - \sum_{D \subset T} \sum_{i=1}^{n-m} \binom{n-m}{i}(-1)^{i}\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
-H(T) &= I(T) - \sum_{D \subset T} 
-(-1)
-\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
-H(T) &= I(T) + \sum_{D \subset T} 
-\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
-H(T) &= \sum_{D \subseteq T} \left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
+$$\begin{aligned} H(T) &= I(T) - \sum_{D \subset T} \sum_{i=1}^{n-m} \binom{n-m}{i}(-1)^{i}\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\H(T) &= I(T) - \sum_{D \subset T} (-1)\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\ H(T) &= I(T) + \sum_{D \subset T} \left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\ H(T) &= \sum_{D \subseteq T} \left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
 \end{aligned}$$
 
 
 
 Case 2: $n \in 2\mathbb{N} + 1$
 
-$$\begin{aligned}
-H(T)  &= - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S)\\
-H(T) &=  - \sum_{S \subset T} \sum_{D \subseteq S} (-1)^{\#T \setminus S }\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
-&=  - \sum_{D \subset T} \sum_{i=1}^{n-m}\binom{n-m}{i} (-1)^{i}\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
-&=  - \sum_{D \subset T} (-1)\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
-&=   \sum_{D \subset T} \left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
-&=   \sum_{D \subseteq T} \left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\
-\end{aligned}$$
+$$\begin{aligned} H(T)  &= - \sum_{S \subset T} \prod_{i  \in T \setminus S} \left(-\mu_i\right)H(S)\\ H(T) &=  - \sum_{S \subset T} \sum_{D \subseteq S} (-1)^{\#T \setminus S }\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\ &=  - \sum_{D \subset T} \sum_{i=1}^{n-m}\binom{n-m}{i} (-1)^{i}\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\ &=  - \sum_{D \subset T} (-1)\left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\ &=   \sum_{D \subset T} \left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\ &=   \sum_{D \subseteq T} \left(\prod_{i  \in T \setminus D} \mu_i \right) I\left(D\right) \\ \end{aligned}$$
 
 We can do this as $I(T) = 0$, due to the size of the set being odd.
 
@@ -169,8 +136,6 @@ This however is quite expensive to compute, The outer summation makes this an ex
 
 
 
-$$\begin{aligned}
-H \left(T \right) &= \sum_{S \subseteq T} \left(\prod_{i \in T \setminus S} \mu_i \right) \left(\sum_{p \in S^2} \prod_{\{i,j\} \in P} Cov\left(X_i,X_j\right) \right) \\
-\end{aligned}$$
+$$\begin{aligned} H \left(T \right) &= \sum_{S \subseteq T} \left(\prod_{i \in T \setminus S} \mu_i \right) \left(\sum_{p \in S^2} \prod_{\{i,j\} \in P} Cov\left(X_i,X_j\right) \right) \\ \end{aligned}$$
 
 We can see the if $\forall i:\mu_i = 0$, the summation will collapse except for when $S = T$, and we recover Isserlis Theorem.
