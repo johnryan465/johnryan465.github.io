@@ -3,4 +3,8 @@ Definition (From wikipedia)
 A time continuous schochastic process $\left{ X_t ; t \in T \right}$ is Gaussian iff for every finite set of indices $t_1,\ldots ,t_k \in T$
 $$X_{t_1,\ldots, t_k} = \left(X_{t_1} , \ldots, X_{t_k} \right)$$
 is a multivariate Gaussian.
-We can almost view this as a infinite dimensional Gaussian.</description><dc:creator>John Ryan</dc:creator><category>machine learning</category></item></channel></rss>
+We can almost view this as a infinite dimensional Gaussian.</description><dc:creator>John Ryan</dc:creator><category>machine learning</category></item><item><title>Multivariate Normal Expectation Maximisation</title><link>https://johnryan.tech/posts/mvn-likelihood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>johnryan465@gmail.com (John Ryan)</author><guid>https://johnryan.tech/posts/mvn-likelihood/</guid><description>Overview In this post we will be looking at the idea of attempting to calculate the expected value of the product of non independent normal distributions.
+$$ E\left[\prod_{i=1}^n X_i\right], \begin{bmatrix}X_1 \ \vdots \ X_n\end{bmatrix} \sim N \left(\mu , \Sigma \right)$$
+The simplest thing to do is kinda a cop-out, if we implicitly assume independence we get the following result.
+$$E\left[\prod_{i=1}^n X_i\right] = \prod_{i=1}^nE\left[ X_i\right] = \prod_{i=1}^n \mu_i $$
+This can be useful as it is very simple to compute, but this assumption isn&amp;rsquo;t always valid.</description><dc:creator>John Ryan</dc:creator><category>machine learning</category></item></channel></rss>
