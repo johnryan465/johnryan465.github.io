@@ -1,5 +1,5 @@
 ---
-title: "Multivariate Normal Expectation Maximisation"
+title: "Multivariate Normal Expectation"
 date: 2020-06-~~24T15~~:29:01Z
 draft: false
 libraries:
