@@ -49,6 +49,7 @@
         var off = document.getElementById("off");
 
         on.onclick = function () {
+            clearInterval(x);
             var countDownDate = new Date((new Date().getTime()) + 25 * 60000);
             x = setInterval(function () {
 
