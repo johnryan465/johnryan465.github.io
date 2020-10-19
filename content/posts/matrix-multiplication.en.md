@@ -127,7 +127,7 @@ First we will need to define what the rank of a tensor is.
 
 
 It is the minimum number of rank 1 tensors required to represent our tensor.
-$$rk(t) = min_R st \sum^R_{r=1} \lambda_r a_{1,r} \otimes \ldots a_{M,r} $$
+$$rk(t) = min_R. t = \sum^R_{r=1} \lambda_r a_{1,r} \otimes \ldots a_{M,r} $$
 
 
 The border rank is then minimum rank of a sequence of tensors of which the limit is is the tensor in question.
