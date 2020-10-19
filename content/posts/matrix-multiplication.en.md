@@ -1,7 +1,7 @@
 ---
 title: "The Complexity of Matrix Multiplication"
 date: 2020-10-13T13:40:05+01:00
-draft: true
+draft: false
 ---
 
 
