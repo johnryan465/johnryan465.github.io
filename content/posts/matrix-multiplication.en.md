@@ -39,18 +39,18 @@ There doesn't seem to really be any redundant calculations, but actually improve
 Strattens Algorithm was the first sub-cubic complexity algorithm for matrix multiplication. We can write matrix multiplication as $8$ sub-matrix multiplications and $4$ matrix additions. This algorithm is also $O(n^3)$, we can quite easily prove this.
 
 
-$$\begin{aligned}\begin{bmatrix} C_{1,1} & C_{1,2} \\  C_{2,1} & C_{2,2} \\  \end{bmatrix} &= \begin{bmatrix} A_{1,1} & A_{1,2} \\  A_{2,1} & A_{2,2} \end{bmatrix} \begin{bmatrix} B_{1,1} & B_{1,2} \\  B_{2,1} & B_{2,2} \end{bmatrix} \\   &= \begin{bmatrix} A_{1,1}B_{1,1} + A_{1,2}B_{2,1} & A_{1,1}B_{1,2} + A_{1,2}B_{2,2} \\  A_{2,1}B_{1,1} + A_{2,2}B_{2,1} & A_{2,1}B_{1,1} + A_{2,2}B_{2,2} \end{bmatrix} \end{aligned}$$
+$$\begin{aligned}\begin{bmatrix} C_{1,1} & C_{1,2} \\\  C_{2,1} & C_{2,2}   \end{bmatrix} &= \begin{bmatrix} A_{1,1} & A_{1,2} \\\  A_{2,1} & A_{2,2} \end{bmatrix} \begin{bmatrix} B_{1,1} & B_{1,2} \\\  B_{2,1} & B_{2,2} \end{bmatrix} \\\   &= \begin{bmatrix} A_{1,1}B_{1,1} + A_{1,2}B_{2,1} & A_{1,1}B_{1,2} + A_{1,2}B_{2,2} \\\  A_{2,1}B_{1,1} + A_{2,2}B_{2,1} & A_{2,1}B_{1,1} + A_{2,2}B_{2,2} \end{bmatrix} \end{aligned}$$
 
 Strattens Algorithm works by instead of doing $8$ sub matrix multiplications it does $7$, this is in exchange for more additions.
 
 The matrix multiplications are defined as follows.
 
-$$\begin{aligned}M_1 &= (A_{1,1} + B_{2,2})(B{1,1} + B_{2,2}) \\ M_2 &= (A_{2,1} + A_{2,2})B_{1,1} \\ M_3 &= A_{1,1}(B_{1,2} - B_{2,2}) \\ M_4 &= A_{2,2}  (B_{2,1} - B_{2,2}) \\  M_5 &= (A_{1,1} + A_{1,2})B_{2,2} \\ M_6 &= (A_{2,1} - A_{1,1})(B_{1,1} + B_{1,2}) \\ M_7 &= (A_{1,2} - A_{2,2})(B_{2,1} + B_{2,2})\end{aligned}$$
+$$\begin{aligned}M_1 &= (A_{1,1} + B_{2,2})(B{1,1} + B_{2,2}) \\\ M_2 &= (A_{2,1} + A_{2,2})B_{1,1} \\\ M_3 &= A_{1,1}(B_{1,2} - B_{2,2}) \\\ M_4 &= A_{2,2}  (B_{2,1} - B_{2,2}) \\\  M_5 &= (A_{1,1} + A_{1,2})B_{2,2} \\\ M_6 &= (A_{2,1} - A_{1,1})(B_{1,1} + B_{1,2}) \\\ M_7 &= (A_{1,2} - A_{2,2})(B_{2,1} + B_{2,2})\end{aligned}$$
 
 
 The we have 
 
-$$\begin{aligned}C_{1,1} &= M_1 + M_4 - M_5 + M_7 \\ C_{1,2} &= M_3 + M_5 \\ C_{2,1} &= M_2 + M_4 \\ C_{2,2} &= M_1 - M_2 + M_3 + M_6\end{aligned}$$
+$$\begin{aligned}C_{1,1} &= M_1 + M_4 - M_5 + M_7 \\\ C_{1,2} &= M_3 + M_5 \\\ C_{2,1} &= M_2 + M_4 \\\ C_{2,2} &= M_1 - M_2 + M_3 + M_6\end{aligned}$$
 
 We can verify that this holds by matrix algebra is quite easily, and them find that the complexity of the algorithm is $O(n^{\log_2(7)})$.
 
