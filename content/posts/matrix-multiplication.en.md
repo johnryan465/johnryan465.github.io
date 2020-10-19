@@ -39,7 +39,7 @@ There doesn't seem to really be any redundant calculations, but actually improve
 Strattens Algorithm was the first sub-cubic complexity algorithm for matrix multiplication. We can write matrix multiplication as $8$ sub-matrix multiplications and $4$ matrix additions. This algorithm is also $O(n^3)$, we can quite easily prove this.
 
 
-$$\begin{aligned}\begin{bmatrix} C_{1,1} & C_{1,2} \\ C_{2,1} & C_{2,2} \end{bmatrix} &= \begin{bmatrix} A_{1,1} & A_{1,2} \\ A_{2,1} & A_{2,2} \end{bmatrix} \begin{bmatrix} B_{1,1} & B_{1,2} \\ B_{2,1} & B_{2,2} \end{bmatrix} \\  &= \begin{bmatrix} A_{1,1}B_{1,1} + A_{1,2}B_{2,1} & A_{1,1}B_{1,2} + A_{1,2}B_{2,2} \\ A_{2,1}B_{1,1} + A_{2,2}B_{2,1} & A_{2,1}B_{1,1} + A_{2,2}B_{2,2} \end{bmatrix} \end{aligned}$$
+$$\begin{aligned}\begin{bmatrix} C_{1,1} & C_{1,2} \\ C_{2,1} & C_{2,2} \\ \end{bmatrix} &= \begin{bmatrix} A_{1,1} & A_{1,2} \\ A_{2,1} & A_{2,2} \end{bmatrix} \begin{bmatrix} B_{1,1} & B_{1,2} \\ B_{2,1} & B_{2,2} \end{bmatrix} \\  &= \begin{bmatrix} A_{1,1}B_{1,1} + A_{1,2}B_{2,1} & A_{1,1}B_{1,2} + A_{1,2}B_{2,2} \\ A_{2,1}B_{1,1} + A_{2,2}B_{2,1} & A_{2,1}B_{1,1} + A_{2,2}B_{2,2} \end{bmatrix} \end{aligned}$$
 
 Strattens Algorithm works by instead of doing $8$ sub matrix multiplications it does $7$, this is in exchange for more additions.
 
