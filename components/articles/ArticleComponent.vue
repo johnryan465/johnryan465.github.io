@@ -23,13 +23,11 @@ export default Vue.extend({
 </script>
 
 
-<style scoped>
-.wrapper {
-  padding: 10vh;
-}
-</style>
 
 <style>
+.wrapper {
+  overflow-x: scroll;
+}
 .nuxt-content h1 {
   text-align: left;
 }
