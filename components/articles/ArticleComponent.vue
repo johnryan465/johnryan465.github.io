@@ -1,5 +1,5 @@
 <template>
-<article class="wrapper">
+<article>
     <h1>{{ article.document.title }} </h1>
     <nuxt-content :document="article.document" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
@@ -25,9 +25,6 @@ export default Vue.extend({
 
 
 <style>
-.wrapper {
-  overflow-x: scroll;
-}
 .nuxt-content h1 {
   text-align: left;
 }

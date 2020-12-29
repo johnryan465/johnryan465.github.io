@@ -17,9 +17,3 @@ export default Vue.extend({
   }
 });
 </script>
-
-<style scoped>
-.wrapper {
-  padding: 10vh;
-}
-</style>

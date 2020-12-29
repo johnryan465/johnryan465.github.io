@@ -27,10 +27,7 @@ export default Vue.extend({
   });
 </script>
 
-<style>
-.wrapper {
-  padding: 10vh;
-}
+<style scoped>
 h1 {
   text-align: left;
 }

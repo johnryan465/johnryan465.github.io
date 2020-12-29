@@ -7,7 +7,7 @@
     </v-app-bar-title>
 
     <v-spacer></v-spacer>
-    
+
     <div v-if="$vuetify.breakpoint.mobile">
       <v-menu bottom left>
       <template v-slot:activator="{ on, attrs }">
@@ -29,8 +29,8 @@
         <v-btn v-for="link in links" :key="link[0]" :to="link[1]" text>
           {{ link[0] }}
         </v-btn>
+        <v-spacer></v-spacer>
     </div>
-    <v-spacer></v-spacer>
   </v-app-bar>
 </template>
 

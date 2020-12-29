@@ -3,13 +3,10 @@
     <nav-bar></nav-bar>
     <v-main class="grey lighten-3">
       <v-container>
-        <v-row>
-          <v-col>
-            <v-sheet
-              min-height="70vh"
-              rounded="lg"
-            >
-             <Nuxt></Nuxt>
+        <v-row class="wrapper">
+          <v-col class="wrapper">
+            <v-sheet min-height="70vh" rounded="lg">
+              <Nuxt></Nuxt>
             </v-sheet>
           </v-col>
         </v-row>
@@ -19,25 +16,23 @@
   </v-app>
 </template>
 
-
 <style>
 /* main.css */
 :root {
-    --colour-1: #05668D;
-    --colour-2: #4987ce;
-    --colour-3: #FFC09F;
-    --colour-4: #FFEE93;
-    --colour-5: #Ef271B;
-    --colour-6: #35495e;
-    --colour-7: #526488;
-    --white: #FFF;
-    --green: #3b8070;
+  --colour-1: #05668d;
+  --colour-2: #4987ce;
+  --colour-3: #ffc09f;
+  --colour-4: #ffee93;
+  --colour-5: #ef271b;
+  --colour-6: #35495e;
+  --colour-7: #526488;
+  --white: #fff;
+  --green: #3b8070;
 }
 
-
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -92,8 +87,8 @@ html {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -111,5 +106,9 @@ html {
 
 .links {
   padding-top: 15px;
+}
+
+.wrapper {
+  overflow-x: scroll;
 }
 </style>
