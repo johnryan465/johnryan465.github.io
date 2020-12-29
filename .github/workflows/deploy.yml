@@ -1,4 +1,4 @@
-name: github pages
+name: deploy
 
 on:
   push:
@@ -13,13 +13,21 @@ jobs:
         with:
           submodules: true
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
         with:
-          hugo-version: '0.68.1'
+          node-version: '15.x'
 
-      - name: Build
-        run: hugo --minify
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm ci
+
+      - run: npm run generate
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -27,5 +35,5 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: johnryan465/johnryan465.github.io
           publish_branch: master
-          publish_dir: ./public
+          publish_dir: ./dist
           cname: johnryan.tech
