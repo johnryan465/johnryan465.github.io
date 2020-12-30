@@ -1,31 +1,26 @@
 <template>
-  <div class="container">
-  <div>
-    <h1>Projects</h1>
-    <ol>
-      <li v-for="project of projects" :key="project.slug">
-        <NuxtLink :to="{ name: 'projects-slug', params: { slug: project.slug } }">
-          <div>
-            <h2>{{ project.title }}</h2>
-            <p>{{ project.description }}</p>
-            <p>{{ project.tags }}</p>
-
-          </div>
-        </NuxtLink>
-      </li>
-    </ol>
-  </div>
-  </div>
+  <v-container fill-height fluid>
+    <v-row align="center" justify="center">
+      <v-col>
+        <h1 class="title">Projects</h1>
+        <hr />
+        <article-list :articles="projects"></article-list>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="js">
 import Vue from 'vue'
+import parseArticle from "@/middleware/parser";
+
 export default Vue.extend({
     layout: 'default',
     async asyncData({ $content, params }) {
-      const projects = await $content('projects', params.slug)
-        .sortBy('createdAt', 'asc')
-        .fetch()
+      const projects = await parseArticle(
+        $content,
+        $content("projects", params.slug)
+      );
       return {
         projects
       }

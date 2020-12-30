@@ -1,7 +1,13 @@
 ---
 title: "Active Learning"
-layout: single
-sitemap: false
-date: 2018-07-13
+date: 2020-04-13T14:07:33Z
+draft: false
+libraries:
+- katex
+- viz
+tags:
+- maths
+- statistics
+- machine-learning
 ---
 Abc

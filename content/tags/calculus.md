@@ -1,4 +1,4 @@
 ---
 name: "Calculus"
-colour: orange
+colour: "#999"
 ---

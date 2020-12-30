@@ -1,19 +1,24 @@
 <template>
-<article-component :article="project"></article-component>
+  <article-component :article="project"></article-component>
 </template>
 
-<script>
-import Vue from 'vue'
-import ArticleComponent from '~/components/articles/ArticleComponent.vue';
-import Article from "@/types/Article"
+<script lang="ts">
+import Vue from "vue";
+import ArticleComponent from "~/components/articles/ArticleComponent.vue";
+import Article from "@/types/Article";
+import parseArticle from "@/middleware/parser";
+
 export default Vue.extend({
   components: { ArticleComponent },
-  async asyncData({ $content, params }) {
-    const project = new Article(await $content('projects', params.slug).fetch())
-    
+  async asyncData({ params, $content }) {
+    const projects: Article[] = await parseArticle(
+      $content,
+      $content("projects", params.slug)
+    );
+    const project = projects[0];
     return {
-      project
-    }
-  }
+      project,
+    };
+  },
 });
 </script>

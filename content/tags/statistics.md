@@ -1,4 +1,4 @@
 ---
 name: "Statistics"
-colour: orange
+colour: "#000"
 ---

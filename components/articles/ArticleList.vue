@@ -1,7 +1,12 @@
 <template>
   <div>
     <div v-for="article of articles" :key="article.slug">
-      <NuxtLink :to="{ name: 'posts-slug', params: { slug: article.slug } }">
+      <NuxtLink
+        :to="{
+          name: article.document.dir.substring(1) + '-slug',
+          params: { slug: article.slug },
+        }"
+      >
         <div>
           <h2 class="title">{{ article.title }}</h2>
         </div>

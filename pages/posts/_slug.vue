@@ -13,7 +13,7 @@ export default Vue.extend({
   async asyncData({ params, $content }) {
     const articles: Article[] = await parseArticle(
       $content,
-      $content("articles", params.slug)
+      $content("posts", params.slug)
     );
     const article = articles[0];
     return {

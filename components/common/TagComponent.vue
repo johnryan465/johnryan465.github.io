@@ -1,11 +1,7 @@
 <template>
   <div class="tag-wrapper">
-    <NuxtLink
-      class="tag-link"
-      :style="{ color: tag.colour }"
-      :to="{ name: 'tags-slug', params: { slug: tag.slug } }"
-    >
-      <span class="tag" :style="{ 'border-color': tag.colour }">
+    <NuxtLink class="tag-link" :to="{ name: 'tags-slug', params: { slug: tag.slug } }">
+      <span class="tag" :style="{ 'background-color': tag.colour }">
         {{ tag.name }}
       </span>
     </NuxtLink>
@@ -38,7 +34,7 @@ export default Vue.extend({
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  background-color: lightgray;
+  color: white;
 }
 .tag-link {
   text-decoration: none;

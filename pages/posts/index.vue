@@ -19,7 +19,7 @@ export default Vue.extend({
   async asyncData({ params, $content }) {
     const articles = await parseArticle(
       $content,
-      $content("articles", params.slug).sortBy("date", "desc")
+      $content("posts", params.slug).sortBy("date", "desc")
     );
     return {
       articles,
@@ -29,9 +29,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-h1 {
-  text-align: left;
-}
 h2 {
   text-align: left;
   font-weight: bold;

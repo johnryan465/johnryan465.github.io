@@ -4,7 +4,7 @@
     <v-main class="grey lighten-3">
       <v-container>
         <v-row class="wrapper">
-          <v-col class="wrapper">
+          <v-col>
             <v-sheet min-height="70vh" rounded="lg">
               <Nuxt></Nuxt>
             </v-sheet>
@@ -109,6 +109,6 @@ html {
 }
 
 .wrapper {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 </style>
