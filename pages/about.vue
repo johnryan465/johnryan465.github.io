@@ -7,10 +7,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 
 export default Vue.extend({
-    layout: 'default'
-    // page component definitions
-})
+  layout: "default",
+});
 </script>
