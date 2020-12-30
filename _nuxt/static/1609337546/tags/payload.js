@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tags", {data:[{tags:[{name:"Leaving Cert",colour:"blue",slug:"leaving-cert"},{name:"Linear Algebra",colour:"orange",slug:"linear-algebra"},{name:"Machine Learning",colour:"green",slug:"machine-learning"},{name:"Maths",colour:"red",slug:"maths"},{name:"Statistics",colour:"orange",slug:"statistics"}]}],fetch:[],mutations:void 0});
