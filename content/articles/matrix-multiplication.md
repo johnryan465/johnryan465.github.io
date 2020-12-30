@@ -7,7 +7,7 @@ libraries:
 - katex
 tags:
 - maths
-- linear algebra
+- linear-algebra
 ---
 
 

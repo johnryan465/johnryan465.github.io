@@ -1,30 +1,43 @@
 <template>
-<v-container fill-height fluid>
-  <v-row align="center" justify="center">
-    <v-col>
-      <h1 class="title">Blog Posts</h1>
-      <hr>
-      <article-list :articles="articles"></article-list>
-    </v-col>
-  </v-row>
-</v-container>
+  <v-container fill-height fluid>
+    <v-row align="center" justify="center">
+      <v-col>
+        <h1 class="title">Blog Posts</h1>
+        <hr />
+        <article-list :articles="articles"></article-list>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
-<script lang="js">
-import Vue from 'vue'
+<script lang="ts">
+import Vue from "vue";
+import parseArticle from "@/middleware/parser";
+
 export default Vue.extend({
-    layout: 'default',
-    async asyncData({ $content, params }) {
-      console.log(params.slug)
-      const articles = await $content('articles', params.slug)
-        .only(['title', 'date', 'description', 'img', 'slug', 'author', 'excerpt', 'tags'])
-        .sortBy('date', 'desc')
-        .fetch()
-      return {
-        articles
-      }
-    }
-  });
+  layout: "default",
+  async asyncData({ params, $content }) {
+    console.log(params);
+    const articles = await parseArticle(
+      $content,
+      $content("articles", params.slug)
+        .only([
+          "title",
+          "date",
+          "description",
+          "img",
+          "slug",
+          "author",
+          "excerpt",
+          "tags",
+        ])
+        .sortBy("date", "desc")
+    );
+    return {
+      articles,
+    };
+  },
+});
 </script>
 
 <style scoped>

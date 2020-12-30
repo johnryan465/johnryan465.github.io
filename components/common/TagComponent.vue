@@ -1,37 +1,25 @@
 <template>
-    <span
-    v-bind:style="{color:col.colour}"
-    >
-    {{col.str}}
-    </span>
+  <NuxtLink :to="{ name: 'tags-slug', params: { slug: tag.slug } }">
+    <p :style="{ color: tag.colour }">{{ tag.name }}</p>
+  </NuxtLink>
 </template>
-
 <script lang="ts">
-import Vue from 'vue'
-import Tag from '@/types/Tag'
+import Vue from "vue";
+import { Prop } from "vue/types/options";
+import Tag from "@/types/Tag";
 
 export default Vue.extend({
-  name : "TagComponent",
-  props : {
-    name:  {
-      type: String,
-      required : true,
-    }
+  name: "TagComponent",
+  props: {
+    tag: {
+      type: Object as Prop<Tag>,
+      required: true,
+    },
   },
   data() {
     return {
-      vname : this.name
+      vtag: this.tag,
     };
   },
-  computed: {
-    col: function () {
-      var mapping : Map<String, Tag> = new Map<String, Tag>([
-          ["maths",new Tag("Maths","red")],
-          ["calculus" ,new Tag("Calc","red")],
-          ["probability", new Tag("Probability 🎲","red")]
-      ]);
-      return mapping.get(this.name) || new Tag(this.name,"blue");
-    }
-  }
 });
 </script>
