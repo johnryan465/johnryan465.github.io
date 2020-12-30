@@ -23,7 +23,6 @@ import Tag from "@/types/Tag";
 export default Vue.extend({
   layout: "default",
   async asyncData({ $content, params }) {
-    console.log(params);
     const tagsRes = await $content("tags", params.slug)
       .only(["slug", "name", "colour"])
       .fetch();

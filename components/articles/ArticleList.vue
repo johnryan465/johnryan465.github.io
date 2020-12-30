@@ -8,8 +8,8 @@
       </NuxtLink>
       <p>📅{{ article.date.toDateString() }}</p>
       <p>{{ article.description }}</p>
-      <div v-for="tag of article.tags" :key="tag.slug">
-        <tag-component :tag="tag"></tag-component>
+      <div>
+        <tags-component :tags="article.tags"></tags-component>
       </div>
       <hr />
     </div>

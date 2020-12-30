@@ -1,11 +1,8 @@
 <template>
   <article>
     <h1>{{ article.document.title }}</h1>
-
-    <div v-for="tag in article.tags" :key="tag.slug">
-      <tag-component :tag="tag"></tag-component>
-    </div>
-
+    <p>📅{{ article.date.toDateString() }}</p>
+    <tags-component :tags="article.tags"></tags-component>
     <nuxt-content :document="article.document" />
     <link
       rel="stylesheet"

@@ -17,21 +17,9 @@ import parseArticle from "@/middleware/parser";
 export default Vue.extend({
   layout: "default",
   async asyncData({ params, $content }) {
-    console.log(params);
     const articles = await parseArticle(
       $content,
-      $content("articles", params.slug)
-        .only([
-          "title",
-          "date",
-          "description",
-          "img",
-          "slug",
-          "author",
-          "excerpt",
-          "tags",
-        ])
-        .sortBy("date", "desc")
+      $content("articles", params.slug).sortBy("date", "desc")
     );
     return {
       articles,

@@ -16,7 +16,6 @@ export default Vue.extend({
       $content("articles").where({ tags: { $contains: [params.slug] } })
     );
     const tag = await $content("tags", params.slug).fetch();
-    console.log(articles);
     return {
       articles,
     };

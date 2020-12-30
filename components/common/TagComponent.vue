@@ -1,7 +1,15 @@
 <template>
-  <NuxtLink :to="{ name: 'tags-slug', params: { slug: tag.slug } }">
-    <p :style="{ color: tag.colour }">{{ tag.name }}</p>
-  </NuxtLink>
+  <div class="tag-wrapper">
+    <NuxtLink
+      class="tag-link"
+      :style="{ color: tag.colour }"
+      :to="{ name: 'tags-slug', params: { slug: tag.slug } }"
+    >
+      <span class="tag" :style="{ 'border-color': tag.colour }">
+        {{ tag.name }}
+      </span>
+    </NuxtLink>
+  </div>
 </template>
 <script lang="ts">
 import Vue from "vue";
@@ -23,3 +31,20 @@ export default Vue.extend({
   },
 });
 </script>
+<style scoped>
+.tag {
+  box-sizing: border-box;
+  padding: 3px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: lightgray;
+}
+.tag-link {
+  text-decoration: none;
+}
+.tag-wrapper {
+  display: inline-block;
+  margin: 10px;
+}
+</style>
