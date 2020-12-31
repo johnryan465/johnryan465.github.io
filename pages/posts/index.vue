@@ -19,7 +19,7 @@ export default Vue.extend({
   async asyncData({ params, $content }) {
     const articles = await parseArticle(
       $content,
-      $content("posts", params.slug).sortBy("date", "desc")
+      $content("posts", params.slug).without(["body"]).sortBy("date", "desc")
     );
     return {
       articles,
