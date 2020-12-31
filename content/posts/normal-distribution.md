@@ -8,6 +8,8 @@ tags:
 - maths
 - probability
 - statistics
+libraries:
+- katex
 ---
 
 

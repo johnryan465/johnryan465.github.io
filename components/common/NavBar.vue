@@ -1,47 +1,31 @@
 <template>
-  <v-app-bar app dense color="var(--colour-2)">
-    <v-app-bar-title
-      >johnryan.tech
-      <v-icon medium> mdi-android-studio </v-icon>
-    </v-app-bar-title>
-
-    <v-spacer></v-spacer>
-
-    <div v-if="$vuetify.breakpoint.mobile">
-      <v-menu bottom left>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn icon v-bind="attrs" v-on="on">
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
-
-        <v-list>
-          <v-list-item v-for="link in links" :key="link[0]">
-            <v-btn :key="link[0]" :to="link[1]" text>
-              {{ link[0] }}
-            </v-btn>
-          </v-list-item>
-        </v-list>
-      </v-menu>
+  <nav class="bg-blue-300" app dense color="var(--colour-2)">
+    <div class="sm:block sm:ml-6">
+      <div class="flex items-center justify-between">
+        <span class="inline-block text-black">johnryan.tech</span>
+        <div class="flex space-x-4">
+          <nuxt-link
+            v-for="link in links"
+            :key="link[0]"
+            :to="link[1]"
+            exact-active-class="text-white"
+            class="bg-blue-300 hover:bg-blue-400 block px-5 py-2 rounded-md text-base font-medium m-1"
+          >
+            {{ link[0] }}
+          </nuxt-link>
+        </div>
+      </div>
     </div>
-    <div v-else>
-      <v-btn v-for="link in links" :key="link[0]" :to="link[1]" text>
-        {{ link[0] }}
-      </v-btn>
-      <v-spacer></v-spacer>
-    </div>
-  </v-app-bar>
+  </nav>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { mapMutations } from "vuex";
 
 export default Vue.extend({
   data: () => ({
     links: [
       ["Home", "/"],
-      ["About", "/about"],
       ["Posts", "/posts"],
       ["Projects", "/projects"],
     ],

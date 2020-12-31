@@ -1,17 +1,9 @@
 <template>
-  <v-app id="inspire">
+  <div class="min-h-screen flex flex-col justify-between">
     <nav-bar></nav-bar>
-    <v-main class="grey lighten-3">
-      <v-container>
-        <v-row class="wrapper">
-          <v-col>
-            <v-sheet min-height="70vh" rounded="lg">
-              <Nuxt></Nuxt>
-            </v-sheet>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
+    <div class="mb-auto">
+      <Nuxt></Nuxt>
+    </div>
     <footer-component></footer-component>
-  </v-app>
+  </div>
 </template>

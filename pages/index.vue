@@ -1,10 +1,22 @@
 <template>
-  <div class="container">
+  <div>
     <div>
-      <h1 class="title">Home</h1>
-      <hr />
-      <terminal-input text="Feel free to have a look around :)"></terminal-input>
+      <h1 class="text-center underline">About Me</h1>
+      <div class="text-center">
+        <span class="font-bold">Name:</span>
+        John Ryan
+        <br />
+        <span class="font-bold">Nationality:</span>
+        🇮🇪
+        <br />
+        <span class="font-bold">Education:</span> 💻@University of Oxford
+        <br />
+        <br />
+      </div>
     </div>
+    <terminal-input
+      :text="['Feel free to have a look around :)', 'Currently a WIP']"
+    ></terminal-input>
   </div>
 </template>
 

@@ -8,7 +8,7 @@
         }"
       >
         <div>
-          <h2 class="title">{{ article.title }}</h2>
+          <h2>{{ article.title }}</h2>
         </div>
       </NuxtLink>
       <p>📅{{ article.date.toDateString() }}</p>

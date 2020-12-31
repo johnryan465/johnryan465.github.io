@@ -8,6 +8,8 @@ tags:
 - machine-learning
 - calculus
 - linear-algebra
+libraries:
+- katex
 ---
 
 

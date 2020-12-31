@@ -1,5 +1,5 @@
 <template>
-  <div id="item"></div>
+  <div class="text-center" id="item"></div>
 </template>
 
 <script lang="js">
@@ -10,7 +10,7 @@ export default Vue.extend({
   name: "TerminalInput",
   props: {
     text: {
-      type: String,
+      type: Array,
       required: true,
       default: "",
     },
@@ -27,25 +27,3 @@ export default Vue.extend({
   },
 });
 </script>
-<style scoped>
-.blinking {
-  animation: blink 2s linear 0s infinite;
-}
-@keyframes blink {
-  0% {
-    background: #0a0;
-  }
-  47% {
-    background: #090;
-  }
-  50% {
-    background: #000;
-  }
-  97% {
-    background: #000;
-  }
-  100% {
-    background: #090;
-  }
-}
-</style>

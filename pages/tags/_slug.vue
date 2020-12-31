@@ -1,13 +1,13 @@
 <template>
-  <v-container fill-height fluid>
-    <v-row align="center" justify="center">
-      <v-col>
+  <div fill-height fluid>
+    <div align="center" justify="center">
+      <div>
         <h1 class="title">{{ tag.name }}</h1>
         <hr />
         <article-list :articles="articles"> </article-list>
-      </v-col>
-    </v-row>
-  </v-container>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">

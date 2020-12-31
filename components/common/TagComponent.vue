@@ -1,7 +1,13 @@
 <template>
-  <div class="tag-wrapper">
-    <NuxtLink class="tag-link" :to="{ name: 'tags-slug', params: { slug: tag.slug } }">
-      <span class="tag" :style="{ 'background-color': tag.colour }">
+  <div class="inline-block m-3">
+    <NuxtLink
+      class="no-underline"
+      :to="{ name: 'tags-slug', params: { slug: tag.slug } }"
+    >
+      <span
+        class="tag p-1 text-white rounded-xl"
+        :style="{ 'background-color': tag.colour }"
+      >
         {{ tag.name }}
       </span>
     </NuxtLink>
@@ -27,20 +33,3 @@ export default Vue.extend({
   },
 });
 </script>
-<style scoped>
-.tag {
-  box-sizing: border-box;
-  padding: 3px;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  color: white;
-}
-.tag-link {
-  text-decoration: none;
-}
-.tag-wrapper {
-  display: inline-block;
-  margin: 10px;
-}
-</style>

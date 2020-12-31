@@ -1,7 +1,7 @@
 <template>
-  <v-container fill-height fluid>
-    <v-row align="center" justify="center">
-      <v-col>
+  <div fill-height fluid>
+    <div align="center" justify="center">
+      <div>
         <h1 class="title">Tags</h1>
         <hr />
         <template>
@@ -12,9 +12,9 @@
             </div>
           </div>
         </template>
-      </v-col>
-    </v-row>
-  </v-container>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">

@@ -27,7 +27,7 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/vuetify',
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -48,9 +48,5 @@ export default {
         'rehype-katex'
       ]
     }
-  },
-
-  vuetify: {
-    optionsPath: './vuetify.options.js'
   }
 }
