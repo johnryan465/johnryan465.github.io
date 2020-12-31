@@ -27,7 +27,8 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -48,5 +49,9 @@ export default {
         'rehype-katex'
       ]
     }
+  },
+
+  googleAnalytics: {
+    id: 'UA-163576874-1'
   }
 }

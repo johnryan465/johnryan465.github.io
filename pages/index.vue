@@ -9,7 +9,7 @@
         <span class="font-bold">Nationality:</span>
         🇮🇪
         <br />
-        <span class="font-bold">Education:</span> 💻@University of Oxford
+        <span class="font-bold">Education:</span> Msc in 💻@University of Oxford 2022
         <br />
         <br />
       </div>
