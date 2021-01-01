@@ -2,6 +2,7 @@
   <div>
     <div v-for="article of articles" :key="article.slug">
       <NuxtLink
+        class="hover:text-blue-300"
         :to="{
           name: article.document.dir.substring(1) + '-slug',
           params: { slug: article.slug },

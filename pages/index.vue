@@ -14,6 +14,7 @@
         <br />
       </div>
     </div>
+    <hr />
     <terminal-input
       :text="['Feel free to have a look around :)', 'Currently a WIP']"
     ></terminal-input>
