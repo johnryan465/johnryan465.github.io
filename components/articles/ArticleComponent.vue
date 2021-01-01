@@ -1,6 +1,6 @@
 <template>
   <article class="p-3 container mx-auto">
-    <h2>{{ article.document.title }}</h2>
+    <h1 class="font-bold">{{ article.document.title }}</h1>
     <p>📅{{ article.date.toDateString() }}</p>
     <tags-component :tags="article.tags"></tags-component>
     <nuxt-content class="prose lg:prose-xl" :document="article.document" />
