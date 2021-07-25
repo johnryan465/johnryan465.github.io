@@ -20,10 +20,10 @@ import Vue from "vue";
 import { Prop } from "vue/types/options";
 import Tag from "@/types/Tag";
 import Article from "@/types/Article";
-import TagComponent from "../common/TagComponent.vue";
+import TagsComponent from "@/components/common/TagsComponent.vue";
 
 export default Vue.extend({
-  components: { TagComponent },
+  components: { TagsComponent },
   name: "ArticleComponent",
   props: {
     article: {

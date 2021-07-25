@@ -26,11 +26,15 @@
 import Vue from "vue";
 import Article from "@/types/Article";
 import Tag from "@/types/Tag";
+import TagsComponent from "@/components/common/TagsComponent.vue"
 
 import { Prop } from "vue/types/options";
 
 export default Vue.extend({
   name: "ArticleList",
+  components: {
+    TagsComponent
+  },
   props: {
     articles: Array as Prop<Array<Article>>,
   },

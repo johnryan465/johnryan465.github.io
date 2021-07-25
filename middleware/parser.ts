@@ -13,6 +13,7 @@ export default async function parseArticles($content : contentFunc, query : Quer
         .fetch());
     const tagRes = await Promise.all(tagResPromise);
     const tags = tagRes.map((d) => d.map((x : any) => new Tag(x.name, x.colour, x.slug)));
-    const articles = articlesData.map((articleData: any, index: number) => new Article(articleData.title, articleData, tags[index], new Date(articleData.date), articleData.slug, articleData.description));
-    return articles
+    const articles = articlesData.map((articleData: any, index: number) => new Article(articleData.title, articleData, tags[index], new Date(articleData.date), articleData.slug, articleData.description, articleData.draft));
+    const filtered_articles = articles.filter(article => article.draft != true);
+    return filtered_articles
 }

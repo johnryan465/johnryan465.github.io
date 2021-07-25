@@ -20,8 +20,14 @@
 <script lang="ts">
 import Vue from "vue";
 import Tag from "@/types/Tag";
+import TagComponent from "@/components/common/TagComponent.vue"
+
+
 export default Vue.extend({
   layout: "default",
+  components: {
+    TagComponent
+  },
   async asyncData({ $content, params }) {
     const tagsRes = await $content("tags", params.slug)
       .only(["slug", "name", "colour"])

@@ -27,5 +27,8 @@ import TerminalInput from "~/components/TerminalInput.vue";
 
 export default Vue.extend({
   name: "HomePage",
+  components: {
+    TerminalInput
+  }
 });
 </script>

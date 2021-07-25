@@ -13,9 +13,13 @@
 <script lang="js">
 import Vue from 'vue'
 import parseArticle from "@/middleware/parser";
+import ArticleList from "@/components/articles/ArticleList.vue"
 
 export default Vue.extend({
     layout: 'default',
+    components: {
+      ArticleList
+    },
     async asyncData({ $content, params }) {
       const projects = await parseArticle(
         $content,

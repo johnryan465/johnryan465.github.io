@@ -40,6 +40,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
+  name: "NavBar",
   data: () => ({
     links: [
       ["Home", "/"],

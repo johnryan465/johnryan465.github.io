@@ -4,6 +4,7 @@ layout: single
 description: "When you first start working with functional programming, you reach a point where you want to do something with **side-effects**"
 sitemap: true
 date: 2021-01-01
+draft: true
 tags: 
 - programming
 - algebra

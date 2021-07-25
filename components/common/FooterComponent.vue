@@ -9,8 +9,11 @@
     </div>
   </footer>
 </template>
-<script>
-export default {
-  data: () => ({}),
-};
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
+  name: "FooterComponent",
+  props: {},
+});
 </script>
