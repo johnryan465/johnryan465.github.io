@@ -10,4 +10,5 @@ tags:
 - statistics
 - machine-learning
 ---
-Abc
+
+<a href="/pdf/report.pdf" download="">Report</a>
