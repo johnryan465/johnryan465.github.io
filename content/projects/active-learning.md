@@ -1,7 +1,7 @@
 ---
-title: "Active Learning"
+title: "Bayesian Active Learning"
 date: 2020-04-13T14:07:33Z
-draft: false
+draft: true
 libraries:
 - katex
 - viz
@@ -11,4 +11,4 @@ tags:
 - machine-learning
 ---
 
-<a href="/pdf/report.pdf" download="">Report</a>
+<a href="/pdf/report.pdf" class="nav-link" download>Report</a>
