@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tags/category-theory", (function(a){return {data:[{tag:{slug:"category-theory",name:"Category Theory",colour:"#999",toc:[],body:{type:"root",children:[]},dir:"\u002Ftags",path:"\u002Ftags\u002Fcategory-theory",extension:".md",createdAt:a,updatedAt:a},articles:[]}],fetch:[],mutations:void 0}}("2022-01-19T15:36:40.443Z")));
