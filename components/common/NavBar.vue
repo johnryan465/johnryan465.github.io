@@ -45,7 +45,7 @@ export default Vue.extend({
     links: [
       ["Home", "/"],
       ["Posts", "/posts"],
-      ["Projects", "/projects"],
+      // ["Projects", "/projects"],
     ],
   }),
 });
