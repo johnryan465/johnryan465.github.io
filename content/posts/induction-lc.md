@@ -1,7 +1,7 @@
 ---
 title: "Induction for the Leaving Cert"
 date: 2020-04-13T14:07:33Z
-draft: false
+draft: true
 libraries:
 - katex
 - viz

@@ -11,6 +11,7 @@
         <br />
         <span class="font-bold">Education:</span> Msc in 💻@University of Oxford 2022
         <br />
+        <span class="font-bold">Work:</span> Founder@Ductile.ai
         <br />
       </div>
     </div>
