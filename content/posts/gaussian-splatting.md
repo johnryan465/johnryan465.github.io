@@ -89,6 +89,10 @@ $\mathcal{N}_{2d}(\mu, \Sigma)$
 
 $\mu = m(u), \Sigma = J.W.V.W^T.J^T$
 
+$$J = \begin{bmatrix} \frac{1}{t_2} & 0 & \frac{-t_0}{t_2^2} \\ 0 & \frac{1}{t_2} & \frac{-t_1}{t_2^2} \end{bmatrix} $$
+
+$$m(u) = \begin{bmatrix}  \frac{t_0}{t_2} \\  \frac{t_1}{t_2} \end{bmatrix}  $$
+
 $W$ is the rotation matrix. $J$ is the jacobian of the perspective projection evaluated at the mean of the gaussian.
 
 
@@ -121,6 +125,8 @@ $$\begin{align*}
 G_i &= \partial \prod_{j < i} (1-\alpha_j) \\
 &= \partial \left(\prod_{j < i-1 } (1-\alpha_j) \right)(1 - \alpha_{i-1} ) + \prod_{j < i-1 } (1-\alpha_j) \partial (1 - \alpha_{i-1} ) \\
 &= G_{i-1}(1 - \alpha_{i-1} ) + F_{i-1} \partial (1 - \alpha_{i-1} ) \\
+&= G_{i-1}(1 - \alpha_{i-1} ) - F_{i-1} \partial (\alpha_{i-1} ) \\
+
 \end{align*} $$
 
 $$\begin{align*}
@@ -135,6 +141,13 @@ With this formulation we have the procedure we need to compute the gradients.
 
 $c_i$, $\alpha_i$ are the same regardless of what variables we are computing gradients with respect to.
 
+$$\alpha_i = o_i \times \exp \left(-0.5 \left(x - m(u) \right)^T \left(JW\Sigma W^T J^T  \right)^{-1} \left(x - m(u) \right)\right) $$
+
+$$c_i = har_i(camera_\mu - u)$$
+
+---
+
+The variables which we are computing gradients with respect to only impact a single term of the summation.
 
 ```python
 def backward
