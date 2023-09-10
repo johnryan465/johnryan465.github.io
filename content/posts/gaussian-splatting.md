@@ -41,13 +41,17 @@ The paper is a good read, (Note I recommend reading this version of the paper be
 
 ## Paramaterization
 
-To ensure that the 3D covariance matrix is positive defintie it is paramaterised by $\Sigma = LL^T$
+To ensure that the 3D covariance matrix is positive definite it is paramaterised by $\Sigma = RSS^TR^T$
 
 ## Rasterizer
 
-The rasterizer implementation is key for performance. The authors provide an efficent CUDA implementation of this. First we will work through what the forward and backward pass of the rasterizer is doing at a high level, then we will delve deeper.
+The rasterizer implementation is key for performance. The authors provide an efficent CUDA implementation of this. 
 
-### Forward Pass
+Unfortunately once we leave the nice land of autograd to get our efficent rasterizer we need to ourselves define the backward pass.
+
+First we will work through what the forward and backward pass of the rasterizer is doing at a high level, then we will delve deeper.
+
+### Forward Pass (High Level)
 
 The forward pass of the rasterizer for 1 pixel is doing the following:
 
@@ -66,11 +70,88 @@ def forward(pixel, gaussians, camera):
     return colour
 ```
 
+This is an expanded form of:
+
+$$c = \sum_{i=0}^n c_i \alpha_i\prod_{j < i} (1-\alpha_j)$$
+
 NOTE: This is not the most efficient way to do this, but it is the most clear.
+
+### Forward Pass (Low Level)
+
+Unfortunately before we can head to the backward pass we need to dig deeper than the psuedocode above.
+
+#### Splatting
+
+We need to dig into the splatting function.
+
+We have our gaussian $\mathcal{N}(u, V)$, we want to project this onto the screen. From our original reference we get our 2D gaussian as:
+$\mathcal{N}_{2d}(\mu, \Sigma)$
+
+$\mu = m(u), \Sigma = J.W.V.W^T.J^T$
+
+$W$ is the rotation matrix. $J$ is the jacobian of the perspective projection evaluated at the mean of the gaussian.
+
+
+#### Exponential Term
+
+The exponential term is the PDF of the 2D gaussian at the pixel location, this is multiplied by the fixed opacity parameter to get the opacity for this gaussian at this pixel.
 
 ### Backward Pass
 
-The backward pass depends on what variables we want to compute gradients with respect to.
+Now to pay back the Faustian bargin which we made to get that lovely fast forward pass. The backward pass depends on what variables we want to compute gradients with respect to. The reference implementation computes gradients with respect to:
+- $R \in \mathbb{R}^{3,3}$, rotation
+- $S \in \mathbb{R}^{3,3}$, scale
+- $o \in \mathbb{R}$, opacity
+- $u \in \mathbb{R}^3$, position
+- $h \in \mathbb{R}^k$, spherical harmonics coefficients, where $k$ depends on the number of coefficients used.
+
+$$\begin{align*}
+\partial c &= \partial \sum_{i=0}^n c_i \alpha_i\prod_{j < i} (1-\alpha_j)\\
+&=  \sum_{i=0}^n \partial \left(c_i \alpha_i\prod_{j < i} (1-\alpha_j) \right)\\
+&=  \sum_{i=0}^n \partial \left(c_i \alpha_i \right) \left(\prod_{j < i} (1-\alpha_j) \right) + \left(c_i \alpha_i \right) \partial \left(\prod_{j < i} (1-\alpha_j) \right) \\
+&=  \sum_{i=0}^n  \left(\partial c_i \alpha_i + c_i \partial \alpha_i \right) \left(\prod_{j < i} (1-\alpha_j) \right) + \left(c_i \alpha_i \right) \partial \left(\prod_{j < i} (1-\alpha_j) \right) \\
+\end{align*}$$
+
+$$F_i = \prod_{j < i} (1-\alpha_j)$$
+
+
+$$F_{i} = F_{i-1} (1 -\alpha_{i-1})$$
+
+$$\begin{align*}
+G_i &= \partial \prod_{j < i} (1-\alpha_j) \\
+&= \partial \left(\prod_{j < i-1 } (1-\alpha_j) \right)(1 - \alpha_{i-1} ) + \prod_{j < i-1 } (1-\alpha_j) \partial (1 - \alpha_{i-1} ) \\
+&= G_{i-1}(1 - \alpha_{i-1} ) + F_{i-1} \partial (1 - \alpha_{i-1} ) \\
+\end{align*} $$
+
+$$\begin{align*}
+\partial c &=  \sum_{i=0}^n  \left(\partial c_i \alpha_i + c_i \partial \alpha_i \right) F_i + \left(c_i \alpha_i \right) G_i \\
+\end{align*}$$
+
+With this formulation we have the procedure we need to compute the gradients.
+
+1. For each gaussian we compute $c_i$, $\partial c_i$, $\alpha_i$, $\partial \alpha_i$.
+2. We compute the partial sum.
+3. We update $F_i$, $G_i$.
+
+$c_i$, $\alpha_i$ are the same regardless of what variables we are computing gradients with respect to.
+
+
+```python
+def backward
+```
+
+
+## Performance
+
+If you implement the above forward pass very naively in python (no parallelization or GPU), the performance you get is pretty dreadful (20+ minutes for a 256x256 image). However with the CUDA implementation provided by the authors, you can get a 1024x1024 image in < 4 milliseconds.
+
+This significant performance leap is done by using the GPU for what it is for, parallelization for graphical primatives.
+
+### GPU
+
+To explain how to get this high performance, we will need to dig into some details of how GPU (CUDA) works.
+
+__Warps, Blocks and Threads__: Multiprocessing on the GPU is not done in the same way as on the CPU. GPU spec sheets will list the number of cores in the thousands. (My RTX 3090 is listed as having 10496 cores)
 
 # What issues?
 
