@@ -1,6 +1,6 @@
 ---
 title: "Derivation of the Normal Distribution"
-layout: single
+layout: default
 description: "Where does the formula come from?"
 sitemap: false
 date: 2018-07-13

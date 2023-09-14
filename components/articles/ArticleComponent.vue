@@ -1,4 +1,5 @@
 <template>
+  {{ article }}
   <article class="p-3 container mx-auto">
     <h1 class="font-bold">{{ article.document.title }}</h1>
     <p>📅{{ article.date.toDateString() }}</p>
@@ -18,11 +19,10 @@
 <script lang="ts">
 import Vue from "vue";
 import { Prop } from "vue/types/options";
-import Tag from "@/types/Tag";
 import Article from "@/types/Article";
 import TagsComponent from "@/components/common/TagsComponent.vue";
 
-export default Vue.extend({
+export default {
   components: { TagsComponent },
   name: "ArticleComponent",
   props: {
@@ -31,5 +31,5 @@ export default Vue.extend({
       required: true,
     },
   },
-});
+};
 </script>

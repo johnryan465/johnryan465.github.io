@@ -3,10 +3,9 @@
 </template>
 
 <script lang="js">
-import Vue from "vue";
 import TypeIt from "typeit";
 
-export default Vue.extend({
+export default {
   name: "TerminalInput",
   props: {
     text: {
@@ -25,5 +24,5 @@ export default Vue.extend({
       strings: this.text,
     }).go();
   },
-});
+};
 </script>

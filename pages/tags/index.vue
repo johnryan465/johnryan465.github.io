@@ -23,7 +23,7 @@ import Tag from "@/types/Tag";
 import TagComponent from "@/components/common/TagComponent.vue"
 
 
-export default Vue.extend({
+export default {
   layout: "default",
   components: {
     TagComponent
@@ -37,5 +37,5 @@ export default Vue.extend({
       tags,
     };
   },
-});
+};
 </script>

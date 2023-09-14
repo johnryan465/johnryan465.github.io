@@ -3,10 +3,7 @@
     <div v-for="article of articles" :key="article.slug">
       <NuxtLink
         class="hover:text-blue-300"
-        :to="{
-          name: article.document.dir.substring(1) + '-slug',
-          params: { slug: article.slug },
-        }"
+        :to="article.document._path"
       >
         <div>
           <h2>{{ article.title }}</h2>
@@ -25,12 +22,14 @@
 <script lang="ts">
 import Vue from "vue";
 import Article from "@/types/Article";
-import Tag from "@/types/Tag";
 import TagsComponent from "@/components/common/TagsComponent.vue"
+/*
 
+
+*/
 import { Prop } from "vue/types/options";
 
-export default Vue.extend({
+export default {
   name: "ArticleList",
   components: {
     TagsComponent
@@ -38,5 +37,5 @@ export default Vue.extend({
   props: {
     articles: Array as Prop<Array<Article>>,
   },
-});
+};
 </script>

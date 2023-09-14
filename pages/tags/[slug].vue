@@ -12,11 +12,10 @@
 
 <script lang="ts">
 import { Context } from "@nuxt/types";
-import Vue from "vue";
 import ArticleList from "@/components/articles/ArticleList.vue";
 import parseArticle from "@/middleware/parser";
 
-export default Vue.extend({
+export default {
   components: { ArticleList },
   async asyncData({ $content, params }: Context) {
     const articles = await parseArticle(
@@ -29,5 +28,5 @@ export default Vue.extend({
       articles,
     };
   },
-});
+};
 </script>

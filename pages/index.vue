@@ -23,13 +23,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
 import TerminalInput from "~/components/TerminalInput.vue";
 
-export default Vue.extend({
+export default {
   name: "HomePage",
   components: {
     TerminalInput
   }
-});
+};
 </script>

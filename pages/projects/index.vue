@@ -11,11 +11,10 @@
 </template>
 
 <script lang="js">
-import Vue from 'vue'
 import parseArticle from "@/middleware/parser";
 import ArticleList from "@/components/articles/ArticleList.vue"
 
-export default Vue.extend({
+export default {
     layout: 'default',
     components: {
       ArticleList
@@ -29,5 +28,5 @@ export default Vue.extend({
         projects
       }
     }
-  });
+  };
 </script>

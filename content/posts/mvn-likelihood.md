@@ -2,6 +2,7 @@
 title: "Multivariate Normal Expectation"
 date: 2020-06-25T12:07:33Z
 draft: false
+layout: default
 description: "A generalisation"
 libraries:
 - katex

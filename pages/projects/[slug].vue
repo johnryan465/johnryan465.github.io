@@ -1,24 +1,24 @@
 <template>
-  <article-component :article="article"></article-component>
+  <article-component :article="project"></article-component>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import ArticleComponent from "~/components/articles/ArticleComponent.vue";
 import Article from "@/types/Article";
-import Tag from "@/types/Tag";
 import parseArticle from "@/middleware/parser";
-export default Vue.extend({
+
+export default {
   components: { ArticleComponent },
   async asyncData({ params, $content }) {
-    const articles: Article[] = await parseArticle(
+    const projects: Article[] = await parseArticle(
       $content,
-      $content("posts", params.slug)
+      $content("projects", params.slug)
     );
-    const article = articles[0];
+    const project = projects[0];
     return {
-      article,
+      project,
     };
   },
-});
+};
 </script>

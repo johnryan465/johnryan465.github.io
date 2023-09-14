@@ -9,7 +9,7 @@ import { Prop } from "vue/types/options";
 import Tag from "@/types/Tag";
 import TagComponent from "@/components/common/TagComponent.vue"
 
-export default Vue.extend({
+export default {
   name: "TagsComponent",
   components : {
     TagComponent
@@ -25,5 +25,5 @@ export default Vue.extend({
       vtags: this.tags,
     };
   },
-});
+};
 </script>

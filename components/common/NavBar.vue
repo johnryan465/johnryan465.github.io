@@ -39,7 +39,7 @@
 <script lang="ts">
 import Vue from "vue";
 
-export default Vue.extend({
+export default {
   name: "NavBar",
   data: () => ({
     links: [
@@ -48,5 +48,5 @@ export default Vue.extend({
       // ["Projects", "/projects"],
     ],
   }),
-});
+};
 </script>
