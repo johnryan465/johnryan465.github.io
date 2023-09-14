@@ -17,7 +17,6 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
 import { Prop } from "vue/types/options";
 import Article from "@/types/Article";
 import TagsComponent from "@/components/common/TagsComponent.vue";

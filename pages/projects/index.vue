@@ -4,7 +4,6 @@
       <div>
         <h1 class="title">Blog Posts</h1>
         <hr />
-        <article-list :articles="articles"></article-list>
 
       </div>
     </div>

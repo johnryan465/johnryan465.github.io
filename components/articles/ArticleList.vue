@@ -22,11 +22,14 @@
 </template>
 
 <script setup lang="ts">
+import { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
 import TagsComponent from '../common/TagsComponent.vue';
-const query = defineProps({
+import { Prop } from 'nuxt/dist/app/compat/capi';
+const { query } = defineProps({
   query: {
-    type: Object,
+    type: Object as Prop<QueryBuilderParams>,
     required: true,
   },
 });
+
 </script>
