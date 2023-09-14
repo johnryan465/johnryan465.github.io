@@ -1,6 +1,6 @@
 <template>
   <main>
-    <ContentList path="/posts" v-slot="{ list }">
+    <ContentList :query="query" v-slot="{ list }">
       <div v-for="article in list" :key="article._path">
         <NuxtLink
         class="hover:text-blue-300"
@@ -20,3 +20,13 @@
     </ContentList>
   </main>
 </template>
+
+<script setup lang="ts">
+import TagsComponent from '../common/TagsComponent.vue';
+const query = defineProps({
+  query: {
+    type: Object,
+    required: true,
+  },
+});
+</script>

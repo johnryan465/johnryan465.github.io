@@ -37,7 +37,6 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
 
 export default {
   name: "NavBar",
@@ -46,7 +45,6 @@ export default {
       ["Home", "/"],
       ["Posts", "/posts"],
       ["Tags", "/tags"]
-      // ["Projects", "/projects"],
     ],
   }),
 };
