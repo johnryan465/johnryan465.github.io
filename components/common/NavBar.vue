@@ -45,6 +45,7 @@ export default {
     links: [
       ["Home", "/"],
       ["Posts", "/posts"],
+      ["Tags", "/tags"]
       // ["Projects", "/projects"],
     ],
   }),

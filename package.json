@@ -12,6 +12,7 @@
     "@nuxt/content": "^2.8.2",
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@tailwindcss/typography": "^0.5.10",
     "nuxt": "^3.7.2",
     "rehype-katex": "^6.0.3",
     "remark-math": "^5.1.1",

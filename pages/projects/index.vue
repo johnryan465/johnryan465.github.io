@@ -2,31 +2,31 @@
   <div fill-height fluid>
     <div align="center" justify="center">
       <div>
-        <h1 class="title">Projects</h1>
+        <h1 class="title">Blog Posts</h1>
         <hr />
-        <article-list :articles="projects"></article-list>
+        <article-list :articles="articles"></article-list>
+
       </div>
     </div>
   </div>
 </template>
 
-<script lang="js">
+<script setup lang="ts">
 import parseArticle from "@/middleware/parser";
 import ArticleList from "@/components/articles/ArticleList.vue"
 
+
+const articles = await parseArticle(await queryContent('projects').find())
+</script>
+
+
+<script lang="ts">
+
 export default {
-    layout: 'default',
-    components: {
-      ArticleList
-    },
-    async asyncData({ $content, params }) {
-      const projects = await parseArticle(
-        $content,
-        $content("projects", params.slug)
-      );
-      return {
-        projects
-      }
-    }
-  };
+  layout: "default",
+  components: {
+    ArticleList
+  },
+};
+
 </script>

@@ -1,32 +1,18 @@
-<template>
-  <div fill-height fluid>
-    <div align="center" justify="center">
-      <div>
-        <h1 class="title">{{ tag.name }}</h1>
-        <hr />
-        <article-list :articles="articles"> </article-list>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
-import { Context } from "@nuxt/types";
-import ArticleList from "@/components/articles/ArticleList.vue";
-import parseArticle from "@/middleware/parser";
-
-export default {
-  components: { ArticleList },
-  async asyncData({ $content, params }: Context) {
-    const articles = await parseArticle(
-      $content,
-      $content("posts").where({ tags: { $contains: [params.slug] } })
-    );
-    const tag = await $content("tags", params.slug).fetch();
-    return {
-      tag,
-      articles,
-    };
-  },
-};
+<script setup lang="ts">
+const route = useRoute()
+const tag = route.params
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }], where: { tags: { $contains: tag.slug } } }
 </script>
+
+<template>
+  <main>
+    <ContentList :query="query" v-slot="{ list }">
+      <div v-for="article in list" :key="article._path">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+        <p>📅{{ article.date }}</p>
+      </div>
+    </ContentList>
+  </main>
+</template>
